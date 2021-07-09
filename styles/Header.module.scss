@@ -1,7 +1,7 @@
 @use 'variables' as V;
 
 .container {
-    border-bottom: 1px solid V.$silver;
+    border-bottom: 1px solid #979797;
     width: 78%;
     height: 96px;
     margin: 0 auto;
@@ -9,30 +9,32 @@
     align-items: center;
     background-color: V.$darkGrey;
     justify-content: space-between;
+    font-family: V.$manrope;
 }
 
 .leftFlexContainer {
-    border: 1px solid blue;
     width: auto;
     height: auto;
     .hamburger {
     display: none;
     }
-    
 }
 
-
-
-
 .rightFlexContainer {
-    border: 1px solid red;
+    .cartLogo:hover {
+        cursor: pointer;
+    }
 }
 
 .nav {
-    border: 1px solid green;
-    color: red;
+    color: V.$white;
     width: 430px;
     display: flex;
     justify-content: space-between;
-    
+    font-weight: 500;
+    letter-spacing: 1px;
+    a:hover {
+        cursor: pointer;
+        color: V.$orange;
+    }
 }

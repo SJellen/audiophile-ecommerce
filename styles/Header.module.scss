@@ -1,0 +1,38 @@
+@use 'variables' as V;
+
+.container {
+    border-bottom: 1px solid V.$silver;
+    width: 78%;
+    height: 96px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: V.$darkGrey;
+    justify-content: space-between;
+}
+
+.leftFlexContainer {
+    border: 1px solid blue;
+    width: auto;
+    height: auto;
+    .hamburger {
+    display: none;
+    }
+    
+}
+
+
+
+
+.rightFlexContainer {
+    border: 1px solid red;
+}
+
+.nav {
+    border: 1px solid green;
+    color: red;
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+    
+}

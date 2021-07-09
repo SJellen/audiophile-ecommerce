@@ -1,0 +1,67 @@
+@use 'variables' as V;
+
+.footer {
+    width: 100%;
+    height: 365px;
+    background-color: V.$darkGrey;
+}
+
+.container {
+    width: 77%; 
+    height: auto;
+    margin: 0 auto;
+}
+
+.topLine {
+    width: 101px;
+    height: 4px;
+    background-color: V.$orange;
+}
+
+.logoNavFlexContainer {
+    width: 100%;
+    margin: 4.3rem auto 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav {
+        color: V.$white;
+        width: 430px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: .9rem;
+        letter-spacing: 1px;
+        a:hover {
+            cursor: pointer;
+            color: V.$orange;
+        }
+    }
+}
+
+.description {
+    padding-top: .5rem;
+    width: 50%;
+    line-height: 1.5;
+    color: grey;
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+    float: right;
+    margin-top: -1rem;
+    .svg:hover {
+        cursor: pointer;
+    }
+}
+
+.copyright {
+    margin-top: 4.5rem;
+    color: #878787;
+    font-weight: 500;
+}
+

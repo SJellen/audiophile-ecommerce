@@ -1,0 +1,28 @@
+
+@use 'variables' as V;
+
+.container {
+    border: 1px solid red;
+    width: 78%;
+    height: 600px;
+    margin: 200px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textContainer {
+    border: 1px solid blue;
+    width: 40%;
+    
+}
+
+.imgContainer {
+    border: 1px solid orange;
+    width: 50%;
+    img {
+        border-radius: 5px;
+        
+    }
+}

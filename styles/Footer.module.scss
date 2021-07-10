@@ -56,6 +56,7 @@
     margin-top: -1rem;
     .svg:hover {
         cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
     }
 }
 

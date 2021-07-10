@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import BestGear from './BestGear'
 
 
 export default function Layout({children}) {
@@ -17,6 +18,7 @@ export default function Layout({children}) {
             <main >
               {children}
             </main>
+            <BestGear />
             <Footer />
         </div>
       )

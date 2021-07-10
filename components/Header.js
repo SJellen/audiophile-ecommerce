@@ -9,10 +9,10 @@ export default function Header() {
         <div className={styles.container} >
             <div className={styles.leftFlexContainer}>
                 <div className={styles.hamburger}>
-                    <Image src="/assets/shared/tablet/icon-hamburger.svg" alt="coffee roasters logo" width="16" height="16" />
+                    <Image src="/assets/shared/tablet/icon-hamburger.svg" alt="open menu icon" width="16" height="16" />
                 </div>
                 <div className={styles.headerLogo}>
-                    <Image src="/assets/shared/desktop/logo.svg" alt="coffee roasters logo" width="143" height="25"/>
+                    <Image src="/assets/shared/desktop/logo.svg" alt="audiophile logo" width="143" height="25"/>
                 </div>
             </div>
             <nav className={styles.nav}>   
@@ -23,7 +23,7 @@ export default function Header() {
             </nav>
             <div className={styles.rightFlexContainer}>
                 <div className={styles.cartLogo}>
-                    <Image src="/assets/shared/desktop/icon-cart.svg" alt="coffee roasters logo" width="23" height="20"/>
+                    <Image src="/assets/shared/desktop/icon-cart.svg" alt="cart icon" width="23" height="20"/>
                 </div>
             </div>
         </div>

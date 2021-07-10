@@ -15,11 +15,11 @@ export default function Header() {
                     <Image src="/assets/shared/desktop/logo.svg" alt="audiophile logo" width="143" height="25"/>
                 </div>
             </div>
-            <nav className={styles.nav}>   
-                <a>HOME</a>
-                <a>HEADPHONES</a>
-                <a>SPEAKERS</a>
-                <a>EARPHONES</a>
+            <nav className={styles.nav}> 
+                <Link href="/"><a>HOME</a></Link>
+                <Link href="/headphones"><a>HEADPHONES</a></Link>  
+                <Link href="/speakers"><a>SPEAKERS</a></Link>  
+                <Link href="/earphones"><a>EARPHONES</a></Link>      
             </nav>
             <div className={styles.rightFlexContainer}>
                 <div className={styles.cartLogo}>

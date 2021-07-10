@@ -2,7 +2,6 @@
 @use 'variables' as V;
 
 .container {
-    border: 1px solid red;
     width: 78%;
     height: 600px;
     margin: 200px auto;
@@ -10,16 +9,49 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-family: V.$manrope;
 }
 
 .textContainer {
     border: 1px solid blue;
-    width: 40%;
+    width: 42.5%;
+    
+    h2 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        line-height: 1;
+        color: V.$black;
+        text-transform: uppercase;
+        span {
+            color: V.$orange;
+    }  
+    }
+    p {
+        color: #888888;
+        line-height: 1.5;
+    }
     
 }
 
 .imgContainer {
-    border: 1px solid orange;
+    width: 50%;
+    img {
+        border-radius: 5px;
+        
+    }
+}
+
+.imgContainerTablet {
+    display: none;
+    width: 50%;
+    img {
+        border-radius: 5px;
+        
+    }
+}
+
+.imgContainerMobile {
+    display: none;
     width: 50%;
     img {
         border-radius: 5px;

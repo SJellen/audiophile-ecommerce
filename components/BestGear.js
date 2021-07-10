@@ -12,6 +12,12 @@ export default function BestGear() {
             <div className={styles.imgContainer}>
                 <Image src="/assets/shared/desktop/image-best-gear.jpg" alt="man with headphones" width="540" height="588"  className={styles.svg}/>
             </div>
+            <div className={styles.imgContainerTablet}>
+                <Image src="/assets/shared/tablet/image-best-gear.jpg" alt="man with headphones" width="689" height="300"  className={styles.svg}/>
+            </div>
+            <div className={styles.imgContainerMobile}>
+                <Image src="/assets/shared/mobile/image-best-gear.jpg" alt="man with headphones" width="327" height="300"  className={styles.svg}/>
+            </div>
 
 
         </div>

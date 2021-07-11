@@ -1,8 +1,57 @@
+@use 'variables' as V;
 
 .container {
     border: 1px solid red;
     margin: 7.5rem auto;
     width: 78%;
     height: 284px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.selectionBox {
+    width: 31%;
+    height: 100%;
+}
+
+.grayBacking {
+    margin-top: 75px;
+    width: 100%;
+    height: 205px;
+    background-color: V.$silver;
+    border-radius: 5px;
+}
+
+.foregroundFlexContainer {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    margin-top: -250px;
+    text-align: center;
+    h3 {
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-top: 2rem;
+        
+
+    }
+    h4 {
+        margin-top: 0;
+        font-weight: 500;
+        font-size: .8rem;
+        letter-spacing: 1px;
+        color: #797979;
+    }
+}
+
+.imgContainer {
+        margin-top: -35px;
+        height: 160px;
+        width: auto;
+        
+}
+

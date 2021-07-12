@@ -1,5 +1,6 @@
 import styles from '../styles/ImageNav.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function ImageNav() {
 
@@ -12,9 +13,12 @@ export default function ImageNav() {
                     <Image src="/assets/shared/desktop/image-headphones.png" alt="headphones" width="200" height="200"  className={styles.img}/>
                 </div>
                 <h3>HEADPHONES</h3>
-                <h4>SHOP <span>
-                    <Image src="/assets/shared/desktop/icon-arrow-right.svg" alt="right arrow" width="5" height="10"  className={styles.svg}/>
-                </span></h4>
+                <Link href="/headphones" passHref>
+                    <h4>SHOP <span>
+                        <Image src="/assets/shared/desktop/icon-arrow-right.svg" alt="right arrow" width="5" height="10"  className={styles.svg}/>
+                    </span></h4>
+                </Link>
+                
                 </div>
             </div>
             <div className={styles.selectionBox}>
@@ -24,9 +28,12 @@ export default function ImageNav() {
                     <Image src="/assets/shared/desktop/image-speakers.png" alt="speakers" width="200" height="200"  className={styles.img}/>
                 </div>
                 <h3>SPEAKERS</h3>
-                <h4>SHOP <span>
-                    <Image src="/assets/shared/desktop/icon-arrow-right.svg" alt="right arrow" width="5" height="10"  className={styles.svg}/>
-                </span></h4>
+                    <Link href="/speakers" passHref>
+                        <h4>SHOP <span>
+                            <Image src="/assets/shared/desktop/icon-arrow-right.svg" alt="right arrow" width="5" height="10"  className={styles.svg}/>
+                        </span></h4>
+                    </Link>
+                
                 </div>
                 
             </div>
@@ -37,9 +44,11 @@ export default function ImageNav() {
                     <Image src="/assets/shared/desktop/image-earphones.png" alt="earphones" width="225" height="200"  className={styles.img}/>
                 </div>
                 <h3>EARPHONES</h3>
-                <h4>SHOP <span>
-                    <Image src="/assets/shared/desktop/icon-arrow-right.svg" alt="right arrow" width="5" height="10"  className={styles.svg}/>
-                </span></h4>
+                    <Link href="/earphones" passHref>
+                        <h4>SHOP <span>
+                        <Image src="/assets/shared/desktop/icon-arrow-right.svg" alt="right arrow" width="5" height="10"  className={styles.svg}/>
+                        </span></h4>
+                    </Link>
                 </div>
             </div>
         </div>

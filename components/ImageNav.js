@@ -34,7 +34,7 @@ export default function ImageNav() {
                 <div className={styles.grayBacking}></div>
                 <div className={styles.foregroundFlexContainer}>
                 <div className={styles.imgContainer}>
-                    <Image src="/assets/shared/desktop/image-earphones.png" alt="earphones" width="200" height="200"  className={styles.img}/>
+                    <Image src="/assets/shared/desktop/image-earphones.png" alt="earphones" width="225" height="200"  className={styles.img}/>
                 </div>
                 <h3>EARPHONES</h3>
                 <h4>SHOP <span>

@@ -7,9 +7,11 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    background-color: V.$darkGrey;
+    background-color: transparent;
     justify-content: space-between;
     font-family: V.$manrope;
+    z-index: 2;
+    position: relative;
 }
 
 .leftFlexContainer {

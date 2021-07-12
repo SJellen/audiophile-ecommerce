@@ -24,9 +24,37 @@
 
 .textContainer {
     position: absolute;
+    margin-top: 3.5rem;
     z-index: 2;
     width: 400px;
-    height: auto;
-    border: 1px solid red;
+    height: 350px;
+    margin-left: 11%;
+    span {
+        color: #949494;
+        letter-spacing: 7.5px;
+    }
+    h1 {
+        margin-top: 1rem;
+        color: V.$white;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    p {
+        width: 90%;
+        color: #949494;
+        font-weight: 300;
+        line-height: 1.5;
+        margin-top: -1rem;
+        margin-bottom: 3.5rem;
+    }
+    a {
+        background-color: V.$orange;
+        padding: 1rem 1.5rem;
+        width: 160px;
+        height: 48px;
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
 }
 

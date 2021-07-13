@@ -1,0 +1,67 @@
+@use '../variables' as V;
+
+.bottomImgContainer {
+    border: 1px solid red;
+    margin: 3rem auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.leftImgContainer {
+    width: 48.75%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    .imgContainer {
+        img {
+            border-radius: 10px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+    }
+    .imgContainerMobile {
+        display: none;
+    }
+}
+
+.rightImgContainer {
+    background-color: V.$silver;
+    width: 48.75%;
+    min-height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .textContainerTop {
+        border: 1px solid red;
+        height: 118px;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            letter-spacing: 2px;
+            font-size: 1.75rem;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+        a {
+        border: 1px solid black;
+        padding: 1rem 1.5rem;
+        width: 160px;
+        height: 48px;
+        font-size: .9rem;
+        letter-spacing: 1px;
+        }
+        a:hover {
+        cursor: pointer;
+        color: V.$white;
+        background-color: V.$black;
+        }  
+    }
+    
+}

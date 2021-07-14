@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import styles from '../../styles/SeeProduct.module.scss'
 import Image from 'next/image'
 import {Context} from '../../context/Context'
+import Link from 'next/link'
 
 export default function SeeProduct() {
 
@@ -24,7 +25,9 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>YX1 WIRELESS EARPHONES</h2>
                         <p>Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</p>
-                        <a onClick={() => handleSeeProductClick(0)}>SEE PRODUCT</a> 
+                        <Link href="/productPage">
+                            <a onClick={() => handleSeeProductClick(0)}>SEE PRODUCT</a> 
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import styles from '../../styles/SeeProduct.module.scss'
 import Image from 'next/image'
 import {Context} from '../../context/Context'
+import Link from 'next/link'
 
 export default function SeeProduct() {
 
@@ -24,7 +25,9 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>XX99 Mark II<br></br>Headphones</h2>
                         <p>The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
-                        <a onClick={() => handleSeeProductClick(3)}>SEE PRODUCT</a> 
+                        <Link href="/productPage">
+                            <a onClick={() => handleSeeProductClick(3)}>SEE PRODUCT</a> 
+                        </Link>
                     </div> 
                 </div>
             </div>
@@ -43,7 +46,9 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>XX99 Mark I<br></br>Headphones</h2>
                         <p>As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.</p>
-                        <a onClick={() => handleSeeProductClick(2)}>SEE PRODUCT</a> 
+                        <Link href="/productPage">
+                            <a onClick={() => handleSeeProductClick(2)}>SEE PRODUCT</a> 
+                        </Link>
                     </div> 
                 </div>
             </div>
@@ -62,7 +67,9 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>XX59<br></br>Headphones</h2>
                         <p>Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.</p>
-                        <a onClick={() => handleSeeProductClick(1)}>SEE PRODUCT</a> 
+                        <Link href="/productPage">
+                            <a onClick={() => handleSeeProductClick(1)}>SEE PRODUCT</a> 
+                        </Link>
                     </div>
                 </div>
             </div>

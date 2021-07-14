@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import styles from '../../styles/SeeProduct.module.scss'
 import Image from 'next/image'
 import {Context} from '../../context/Context'
+import Link from 'next/link'
 
 export default function SeeProduct() {
 
@@ -24,7 +25,9 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>ZX9<br></br>SPEAKER</h2>
                         <p>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
-                        <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a> 
+                        <Link href="/productPage">
+                            <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a> 
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -43,7 +46,9 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>ZX7<br></br>SPEAKER</h2>
                         <p>Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
-                        <a onClick={() => handleSeeProductClick(4)}>SEE PRODUCT</a> 
+                        <Link href="/productPage">
+                            <a onClick={() => handleSeeProductClick(4)}>SEE PRODUCT</a>
+                        </Link>
                     </div>
                 </div>
             </div>

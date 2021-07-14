@@ -1,11 +1,14 @@
+import React, {useContext} from 'react'
 import styles from '../../styles/SeeProduct.module.scss'
 import Image from 'next/image'
+import {Context} from '../../context/Context'
 
 export default function SeeProduct() {
 
+    const {handleSeeProductClick} = useContext(Context)
+
     return (
         <div>
-
             <div className={styles.itemContainer} >
                 <div className={styles.imgContainer}>
                     <Image src="/assets/category-speakers/desktop/image-zx9.jpg" alt="speaker" width="1080" height="1120"  className={styles.img}/>
@@ -21,12 +24,10 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>ZX9<br></br>SPEAKER</h2>
                         <p>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
-                        <a>SEE PRODUCT</a> 
+                        <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a> 
                     </div>
-                    
                 </div>
             </div>
-
             <div className={styles.itemContainer} style={{flexDirection: "row-reverse"}}>
                 <div className={styles.imgContainer}>
                     <Image src="/assets/category-speakers/desktop/image-zx7.jpg" alt="speaker" width="1080" height="1120"  className={styles.img}/>
@@ -42,14 +43,10 @@ export default function SeeProduct() {
                        <span>NEW PRODUCT</span>
                         <h2>ZX7<br></br>SPEAKER</h2>
                         <p>Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
-                        <a>SEE PRODUCT</a> 
+                        <a onClick={() => handleSeeProductClick(4)}>SEE PRODUCT</a> 
                     </div>
-                    
                 </div>
             </div>
-
-            
-
         </div>
     )
 }

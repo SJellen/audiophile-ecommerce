@@ -16,7 +16,7 @@ function ContextProvider({ children }) {
     console.log(data, currentProduct)
 
     return (
-        <Context.Provider value={{handleSeeProductClick}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct}}>
             {children}
         </Context.Provider>
     )

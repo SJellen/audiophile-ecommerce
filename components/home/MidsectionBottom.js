@@ -16,14 +16,12 @@ export default function MidsectionBottom() {
                 <Image src="/assets/home/mobile/image-earphones-yx1.jpg" alt="speaker" width="654" height="400"  className={styles.img}/>
             </div> 
             </div>
-            
         <div className={styles.rightImgContainer}>
             <div className={styles.textContainerTop}>
                 <h2>YX1 EARPHONES</h2>
                 <a>SEE PRODUCT</a>
             </div> 
         </div> 
-    </div>
-       
+    </div>  
     )
 }

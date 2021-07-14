@@ -48,6 +48,27 @@ export default function SeeProduct() {
                 </div>
             </div>
 
+            <div className={styles.itemContainer} >
+                <div className={styles.imgContainer}>
+                    <Image src="/assets/category-speakers/desktop/image-zx9.jpg" alt="earphones" width="1080" height="1120"  className={styles.img}/>
+                </div>
+                <div className={styles.imgContainerTablet}>
+                    <Image src="/assets/category-speakers/tablet/image-zx9.jpg" alt="earphones" width="1378" height="704"  className={styles.img}/>
+                </div>
+                <div className={styles.imgContainerMobile}>
+                    <Image src="/assets/category-speakers/mobile/image-zx9.jpg" alt="earphones" width="654" height="704"  className={styles.img}/>
+                </div>
+                <div className={styles.infoContainer}>
+                    <div className={styles.textContainer}>
+                       <span>NEW PRODUCT</span>
+                        <h2>ZX9<br></br>SPEAKER</h2>
+                        <p>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
+                        <a>SEE PRODUCT</a> 
+                    </div>
+                    
+                </div>
+            </div>
+
             
 
         </div>

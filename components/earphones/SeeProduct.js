@@ -1,4 +1,4 @@
-import styles from '../../styles/earphones/SeeProduct.module.scss'
+import styles from '../../styles/SeeProduct.module.scss'
 import Image from 'next/image'
 
 export default function SeeProduct() {
@@ -22,7 +22,6 @@ export default function SeeProduct() {
                         <p>Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</p>
                         <a>SEE PRODUCT</a> 
                     </div>
-                    
                 </div>
             </div>
         </div>

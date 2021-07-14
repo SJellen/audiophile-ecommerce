@@ -18,7 +18,7 @@ export default function SeeProduct() {
                 <div className={styles.infoContainer}>
                     <div className={styles.textContainer}>
                        <span>NEW PRODUCT</span>
-                        <h2>YX1 EARPHONES</h2>
+                        <h2>YX1 WIRELESS EARPHONES</h2>
                         <p>Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</p>
                         <a>SEE PRODUCT</a> 
                     </div>

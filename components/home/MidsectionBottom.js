@@ -1,7 +1,11 @@
+import React, {useContext} from 'react'
 import styles from '../../styles/home/MidsectionBottom.module.scss'
 import Image from 'next/image'
+import {Context} from '../../context/Context'
 
 export default function MidsectionBottom() {
+
+    const {handleSeeProductClick} = useContext(Context)
     
     return (
         <div className={styles.bottomImgContainer}>
@@ -19,7 +23,7 @@ export default function MidsectionBottom() {
         <div className={styles.rightImgContainer}>
             <div className={styles.textContainerTop}>
                 <h2>YX1 EARPHONES</h2>
-                <a>SEE PRODUCT</a>
+                <a onClick={() => handleSeeProductClick(0)}>SEE PRODUCT</a>
             </div> 
         </div> 
     </div>  

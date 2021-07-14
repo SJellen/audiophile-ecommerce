@@ -1,7 +1,11 @@
+import React, {useContext} from 'react'
 import styles from '../../styles/home/MidsectionMid.module.scss'
 import Image from 'next/image'
+import {Context} from '../../context/Context'
 
 export default function MidsectionMid() {
+
+    const {handleSeeProductClick} = useContext(Context)
     
     return (
         <div className={styles.midImgContainer}>
@@ -16,7 +20,7 @@ export default function MidsectionMid() {
             </div>
             <div className={styles.midTextContainer}>
                 <h2>ZX7 SPEAKER</h2>
-                <a>SEE PRODUCT</a>
+                <a onClick={() => handleSeeProductClick(4)}>SEE PRODUCT</a>
             </div>
         </div>
     )

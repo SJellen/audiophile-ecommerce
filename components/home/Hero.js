@@ -1,7 +1,12 @@
+import React, {useContext} from 'react'
 import styles from '../../styles/home/Hero.module.scss'
 import Image from 'next/image'
+import {Context} from '../../context/Context'
 
 export default function Hero() {
+
+    const {handleSeeProductClick} = useContext(Context)
+
     return (
         <div className={styles.container}>
             <div className={styles.imgContainer}>
@@ -17,7 +22,7 @@ export default function Hero() {
                 <span>NEW PRODUCT</span>
                 <h1>XX99 Mark II Headphones</h1>
                 <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                <a>SEE PRODUCT</a>
+                <a onClick={() => handleSeeProductClick(0)}>SEE PRODUCT</a>
             </div>
         </div>
     )

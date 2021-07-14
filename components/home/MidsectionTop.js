@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import styles from '../../styles/home/MidsectionTop.module.scss'
 import Image from 'next/image'
 import {Context} from '../../context/Context'
+import Link from 'next/link'
 
 export default function MidsectionTop() {
 
@@ -24,7 +25,9 @@ export default function MidsectionTop() {
             <div className={styles.textContainerTop}>
                 <h1>ZX9 SPEAKER</h1>
                 <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a>
+                <Link href="/productPage">
+                    <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a>
+                </Link>
             </div>
         </div>
     )

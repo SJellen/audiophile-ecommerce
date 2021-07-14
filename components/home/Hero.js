@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import styles from '../../styles/home/Hero.module.scss'
 import Image from 'next/image'
 import {Context} from '../../context/Context'
+import Link from 'next/link'
 
 export default function Hero() {
 
@@ -22,7 +23,9 @@ export default function Hero() {
                 <span>NEW PRODUCT</span>
                 <h1>XX99 Mark II Headphones</h1>
                 <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                <a onClick={() => handleSeeProductClick(0)}>SEE PRODUCT</a>
+                <Link href="/productPage">
+                    <a onClick={() => handleSeeProductClick(3)}>SEE PRODUCT</a>
+                </Link>
             </div>
         </div>
     )

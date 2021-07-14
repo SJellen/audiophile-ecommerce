@@ -10,7 +10,8 @@ function ContextProvider({ children }) {
     
 
     function handleSeeProductClick(itemNumber) {
-        setCurrentProduct(data[itemNumber])
+        let selection = data[itemNumber]
+        setCurrentProduct(selection)
     }
         
     console.log(data, currentProduct)

@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import styles from '../../styles/home/MidsectionMid.module.scss'
 import Image from 'next/image'
 import {Context} from '../../context/Context'
+import Link from 'next/link'
 
 export default function MidsectionMid() {
 
@@ -20,7 +21,9 @@ export default function MidsectionMid() {
             </div>
             <div className={styles.midTextContainer}>
                 <h2>ZX7 SPEAKER</h2>
-                <a onClick={() => handleSeeProductClick(4)}>SEE PRODUCT</a>
+                <Link href="/productPage">
+                    <a onClick={() => handleSeeProductClick(4)}>SEE PRODUCT</a>
+                </Link>
             </div>
         </div>
     )

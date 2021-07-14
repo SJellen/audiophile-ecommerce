@@ -1,0 +1,81 @@
+@use '../variables' as V;
+
+
+.itemContainer {
+    border: 1px solid red;
+    width: 78%;
+    height: auto;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: row;
+    .imgContainer {
+        width: 48%;
+        img {
+            border-radius: 10px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+    }
+    .imgContainerMobile {
+        display: none;
+    }
+
+    .infoContainer {
+        height: auto;
+        width: 52%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+
+    .textContainer {
+        border: 1px solid blue;
+        width: 80%;
+        height: auto;
+        span {
+            color: V.$orange;
+            letter-spacing: 8px;
+        }
+        h2 {
+            margin-top: 1rem;
+            color: V.$black;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: V.$gray;
+            line-height: 1.5;
+            font-size: .975rem;
+            margin-bottom: 3.25rem;
+            font-weight: 200;
+        }
+        a {
+            
+            color: V.$white;
+            position: relative;
+            z-index: 3;
+            background-color: V.$orange;
+            padding: 1rem 1.5rem;
+            width: 160px;
+            height: 48px;
+            font-size: .9rem;
+            letter-spacing: 1px;
+        }
+        a:hover {
+            cursor: pointer;
+            background-color: V.$lightOrange;
+        }
+        .addToCartContainer {
+            border: 1px solid red;
+            height: 50px;
+            width: 300px;
+            display: flex;
+            
+        }
+    }
+    
+}

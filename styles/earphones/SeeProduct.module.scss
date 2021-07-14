@@ -1,0 +1,38 @@
+.itemContainer {
+    border: 1px solid red;
+    width: 78%;
+    height: auto;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: row;
+    .imgContainer {
+        width: 50%;
+        img {
+            border-radius: 10px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+    }
+    .imgContainerMobile {
+        display: none;
+    }
+
+    .infoContainer {
+        border: 1px solid red;
+        height: auto;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .textContainer {
+        border: 1px solid blue;
+        width: 445px;
+        height: 343px;
+    }
+    
+}
+

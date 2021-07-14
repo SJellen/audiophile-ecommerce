@@ -8,13 +8,13 @@ export default function SeeProduct() {
 
             <div className={styles.itemContainer} >
                 <div className={styles.imgContainer}>
-                    <Image src="/assets/category-speakers/desktop/image-zx9.jpg" alt="earphones" width="1080" height="1120"  className={styles.img}/>
+                    <Image src="/assets/category-speakers/desktop/image-zx9.jpg" alt="speaker" width="1080" height="1120"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerTablet}>
-                    <Image src="/assets/category-speakers/tablet/image-zx9.jpg" alt="earphones" width="1378" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-speakers/tablet/image-zx9.jpg" alt="speaker" width="1378" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerMobile}>
-                    <Image src="/assets/category-speakers/mobile/image-zx9.jpg" alt="earphones" width="654" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-speakers/mobile/image-zx9.jpg" alt="speaker" width="654" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={styles.textContainer}>
@@ -29,13 +29,13 @@ export default function SeeProduct() {
 
             <div className={styles.itemContainer} style={{flexDirection: "row-reverse"}}>
                 <div className={styles.imgContainer}>
-                    <Image src="/assets/category-speakers/desktop/image-zx7.jpg" alt="earphones" width="1080" height="1120"  className={styles.img}/>
+                    <Image src="/assets/category-speakers/desktop/image-zx7.jpg" alt="speaker" width="1080" height="1120"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerTablet}>
-                    <Image src="/assets/category-speakers/tablet/image-zx7.jpg" alt="earphones" width="1378" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-speakers/tablet/image-zx7.jpg" alt="speaker" width="1378" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerMobile}>
-                    <Image src="/assets/category-speakers/mobile/image-zx7.jpg" alt="earphones" width="654" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-speakers/mobile/image-zx7.jpg" alt="speaker" width="654" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.infoContainer} style={{justifyContent: "flex-start"}}>
                     <div className={styles.textContainer}>

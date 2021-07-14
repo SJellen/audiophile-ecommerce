@@ -8,19 +8,19 @@ export default function SeeProduct() {
 
             <div className={styles.itemContainer} >
                 <div className={styles.imgContainer}>
-                    <Image src="/assets/category-speakers/desktop/image-zx9.jpg" alt="earphones" width="1080" height="1120"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/desktop/image-xx99-mark-two.jpg" alt="headphones" width="1080" height="1120"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerTablet}>
-                    <Image src="/assets/category-speakers/tablet/image-zx9.jpg" alt="earphones" width="1378" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/tablet/image-xx99-mark-two.jpg" alt="headphones" width="1378" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerMobile}>
-                    <Image src="/assets/category-speakers/mobile/image-zx9.jpg" alt="earphones" width="654" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/mobile/image-xx99-mark-two.jpg" alt="headphones" width="654" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={styles.textContainer}>
                        <span>NEW PRODUCT</span>
-                        <h2>ZX9<br></br>SPEAKER</h2>
-                        <p>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
+                        <h2>XX99 Mark II<br></br>Headphones</h2>
+                        <p>The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
                         <a>SEE PRODUCT</a> 
                     </div>
                     
@@ -29,19 +29,19 @@ export default function SeeProduct() {
 
             <div className={styles.itemContainer} style={{flexDirection: "row-reverse"}}>
                 <div className={styles.imgContainer}>
-                    <Image src="/assets/category-speakers/desktop/image-zx7.jpg" alt="earphones" width="1080" height="1120"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/desktop/image-xx99-mark-one.jpg" alt="headphones" width="1080" height="1120"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerTablet}>
-                    <Image src="/assets/category-speakers/tablet/image-zx7.jpg" alt="earphones" width="1378" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/tablet/image-xx99-mark-one.jpg" alt="headphones" width="1378" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerMobile}>
-                    <Image src="/assets/category-speakers/mobile/image-zx7.jpg" alt="earphones" width="654" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/mobile/image-xx99-mark-one.jpg" alt="headphones" width="654" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.infoContainer} style={{justifyContent: "flex-start"}}>
                     <div className={styles.textContainer}>
                        <span>NEW PRODUCT</span>
-                        <h2>ZX7<br></br>SPEAKER</h2>
-                        <p>Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
+                        <h2>XX99 Mark I<br></br>Headphones</h2>
+                        <p>As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.</p>
                         <a>SEE PRODUCT</a> 
                     </div>
                     
@@ -50,19 +50,19 @@ export default function SeeProduct() {
 
             <div className={styles.itemContainer} >
                 <div className={styles.imgContainer}>
-                    <Image src="/assets/category-speakers/desktop/image-zx9.jpg" alt="earphones" width="1080" height="1120"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/desktop/image-xx59.jpg" alt="headphones" width="1080" height="1120"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerTablet}>
-                    <Image src="/assets/category-speakers/tablet/image-zx9.jpg" alt="earphones" width="1378" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/tablet/image-xx59.jpg" alt="headphones" width="1378" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.imgContainerMobile}>
-                    <Image src="/assets/category-speakers/mobile/image-zx9.jpg" alt="earphones" width="654" height="704"  className={styles.img}/>
+                    <Image src="/assets/category-headphones/mobile/image-xx59.jpg" alt="headphones" width="654" height="704"  className={styles.img}/>
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={styles.textContainer}>
                        <span>NEW PRODUCT</span>
-                        <h2>ZX9<br></br>SPEAKER</h2>
-                        <p>Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
+                        <h2>XX59<br></br>Headphones</h2>
+                        <p>Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.</p>
                         <a>SEE PRODUCT</a> 
                     </div>
                     

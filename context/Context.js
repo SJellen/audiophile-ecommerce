@@ -7,6 +7,8 @@ function ContextProvider({ children }) {
 
     const [currentProduct, setCurrentProduct] = useState(0)
 
+    const [productPageQuantity, setProductPageQuantity] = useState(1)
+
     
 
     function handleSeeProductClick(itemNumber) {
@@ -17,7 +19,7 @@ function ContextProvider({ children }) {
     console.log(data, currentProduct)
 
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity}}>
             {children}
         </Context.Provider>
     )

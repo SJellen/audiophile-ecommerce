@@ -1,0 +1,22 @@
+@use '../variables' as V;
+
+.container {
+    border: 1px solid red;
+    font-family: V.$manrope;
+    width: 78%;
+    height: 318px;
+    margin: 10rem auto 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.featureContainer {
+    border: 1px solid blue;
+    width: 60%;
+}
+
+.contentsContainer {
+    border: 1px solid green;
+    width: 40%;
+}

@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function ProductHero() {
 
-    const {currentProduct} = useContext(Context)
+    const {currentProduct, productPageQuantity} = useContext(Context)
 
     console.log(typeof currentProduct?.image.desktop)
 
@@ -28,6 +28,11 @@ export default function ProductHero() {
                         <p>{currentProduct?.description}</p>
                         <h3><span>$</span>{currentProduct?.price.toLocaleString("en-US")}</h3>
                         <div className={styles.addToCartContainer}>
+                            <div className={styles.quantityBox}>
+                                <span className={styles.plus}>-</span>
+                                {productPageQuantity}
+                                 <span className={styles.minus}>+</span>
+                            </div>
                             <a>ADD TO CART</a>
                         </div>    
                     </div>

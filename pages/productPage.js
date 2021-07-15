@@ -4,6 +4,7 @@ import Image from 'next/image'
 import {Context} from  '../context/Context'
 import ImageNav from '../components/ImageNav'
 import ProductHero from '../components/productPage/ProductHero'
+import Features from '../components/productPage/Features'
 
 export default function ProductPage() {
 
@@ -14,6 +15,7 @@ export default function ProductPage() {
             <div className={styles.header}></div>
             <div className={styles.goBack}><h4>Go Back</h4></div>
             <ProductHero />
+            <Features />
             <ImageNav />
 
         </div>

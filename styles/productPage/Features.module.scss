@@ -4,7 +4,7 @@
     border: 1px solid red;
     font-family: V.$manrope;
     width: 78%;
-    height: 318px;
+    height: auto;
     margin: 10rem auto 5rem auto;
     display: flex;
     justify-content: space-between;
@@ -14,9 +14,26 @@
 .featureContainer {
     border: 1px solid blue;
     width: 60%;
+    h2 {
+        font-size: 2rem;
+        margin-top: 0;
+        letter-spacing: 2px;
+    }
+    p {
+        color: V.$gray;
+        line-height: 1.75;
+        font-size: .975rem;
+        margin-bottom: 3.25rem;
+        font-weight: 200;
+    }
 }
 
 .contentsContainer {
     border: 1px solid green;
     width: 40%;
+    h2 {
+        font-size: 2rem;
+        margin-top: 0;
+        letter-spacing: 2px;
+    }
 }

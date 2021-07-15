@@ -8,8 +8,6 @@ export default function ProductHero() {
 
     const {currentProduct, productPageQuantity} = useContext(Context)
 
-    console.log(typeof currentProduct?.image.desktop)
-
     return (
             <div className={styles.itemContainer} >
                 <div className={styles.imgContainer}>

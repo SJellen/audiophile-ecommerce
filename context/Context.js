@@ -5,7 +5,7 @@ const Context = React.createContext()
 
 function ContextProvider({ children }) {
 
-    const [currentProduct, setCurrentProduct] = useState()
+    const [currentProduct, setCurrentProduct] = useState(0)
 
     
 

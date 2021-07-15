@@ -26,8 +26,7 @@ export default function ProductHero() {
                        <span>NEW PRODUCT</span>
                         <h2>{currentProduct?.name}</h2>
                         <p>{currentProduct?.description}</p>
-
-                        <h3>${currentProduct?.price}</h3>
+                        <h3><span>$</span>{currentProduct?.price.toLocaleString("en-US")}</h3>
                         <div className={styles.addToCartContainer}>
                             <a>ADD TO CART</a>
                         </div>    

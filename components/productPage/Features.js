@@ -4,9 +4,9 @@ import { Context } from '../../context/Context'
 
 export default function Features() {
 
-    const {currentProduct, productPageQuantity} = useContext(Context)
+    const {currentProduct} = useContext(Context)
 
-    const contents = currentProduct.includes.map((x, index) => <li key={index}><span>{x.quantity}x</span>{x.item}</li>)
+    const contents = currentProduct.includes.map((x, index) => <li key={index} className={styles.li}><span className={styles.count}>{x.quantity}x</span>{x.item}</li>)
 
     return (
         <div className={styles.container}>
@@ -15,8 +15,10 @@ export default function Features() {
                 <p>{currentProduct?.features}</p>
             </div>
             <div className={styles.contentsContainer}>
-                <h2>IN THE BOX</h2>
-                <ul>{contents}</ul>
+                <div className={styles.textBox}>
+                    <h2>IN THE BOX</h2>
+                    <ul>{contents}</ul>
+                </div>
             </div>
         </div>
     )

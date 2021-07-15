@@ -29,11 +29,35 @@
 }
 
 .contentsContainer {
-    border: 1px solid green;
     width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    .textBox {
+        width: 350px;
+        height: auto;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        .li {
+            width: 100%;
+            margin: .5rem auto;
+            margin-left: -2.5rem;
+            color: V.$gray;
+        }
+        .count {
+        color: V.$orange;
+        margin-right: 1.5rem;
+        }
+
+    }
     h2 {
+        margin: 0 auto;
         font-size: 2rem;
         margin-top: 0;
         letter-spacing: 2px;
     }
+    
 }

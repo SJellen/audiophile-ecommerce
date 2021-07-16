@@ -19,7 +19,6 @@ function ContextProvider({ children }) {
         const splitArr = currentProduct.features.split("\n")
         setFeatureLineOne(splitArr[0])
         setFeatureLineTwo(splitArr[2])
-        
     }
 
     useEffect(() => {

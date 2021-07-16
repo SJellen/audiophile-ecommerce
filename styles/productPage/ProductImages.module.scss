@@ -1,0 +1,11 @@
+@use '../variables' as V;
+
+.container {
+    border: 1px solid red;
+    font-family: V.$manrope;
+    width: 78%;
+    height: auto;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: row;
+}

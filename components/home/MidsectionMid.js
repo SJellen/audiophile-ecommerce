@@ -11,7 +11,7 @@ export default function MidsectionMid() {
     return (
         <div className={styles.midImgContainer}>
             <div className={styles.imgContainer}>
-                <Image src="/assets/home/desktop/image-speaker-zx7.jpg" alt="speaker" width="1110" height="320"  className={styles.img}/>
+                <Image src="/assets/home/desktop/image-speaker-zx7.jpg" alt="speaker" width="1120" height="320"  className={styles.img}/>
             </div>
             <div className={styles.imgContainerTablet}>
                 <Image src="/assets/home/tablet/image-speaker-zx7.jpg" alt="speaker" width="689" height="320"  className={styles.img}/>

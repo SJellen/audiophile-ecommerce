@@ -4,7 +4,7 @@
     border: 1px solid red;
     font-family: V.$manrope;
     width: 78%;
-    height: 600px;
+    height: auto;
     margin: 7.5rem auto;
     display: flex;
     flex-direction: row;
@@ -12,26 +12,71 @@
 }
 
 .leftContainer {
-    border: 1px solid blue;
     width: 40%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .topLeftContainer {
-    background-color: black;
-    height: 47%;
-    width: 100%;
+    
+    .imgContainer {
+        .img {
+            border-radius: 7.5px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+        .img {
+            border-radius: 7.5px;
+        }
+    }
+    .imgContainerMobile {
+        display: none;
+        .img {
+            border-radius: 7.5px;
+        }
+    }
 }
 
 .bottomLeftContainer {
-    background-color: grey;
-    height: 47%;
-    width: 100%;
+    .imgContainer {
+        .img {
+            border-radius: 7.5px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+        .img {
+            border-radius: 7.5px;
+        }
+    }
+    .imgContainerMobile {
+        display: none;
+        .img {
+            border-radius: 7.5px;
+        }
+    }
 }
 
 .rightContainer {
-    border: 1px solid green;
     width: 57%;
+    .imgContainer {
+        .img {
+            border-radius: 7.5px;
+        }
+    }
+    .imgContainerTablet {
+        display: none;
+        .img {
+            border-radius: 7.5px;
+        }
+    }
+    .imgContainerMobile {
+        display: none;
+        .img {
+            border-radius: 7.5px;
+        }
+    }
 }

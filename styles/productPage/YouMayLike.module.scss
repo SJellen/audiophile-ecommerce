@@ -1,0 +1,36 @@
+@use '../variables' as V;
+
+.container {
+    border: 1px solid red;
+    font-family: V.$manrope;
+    width: 78%;
+    height: 571px;
+    margin: 10rem auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.headline {
+    width: 100%;
+    height: auto;
+    border: 1px solid gold;
+    text-align: center;
+    margin-top: 0;
+}
+
+.productFlexContainer {
+    border: 1px solid blue;
+    width: 100%;
+    height: 471px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productBox {
+    width: 31.5%;
+    height: 100%;
+    background-color: red;
+}

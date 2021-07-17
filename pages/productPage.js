@@ -6,6 +6,7 @@ import ImageNav from '../components/ImageNav'
 import ProductHero from '../components/productPage/ProductHero'
 import Features from '../components/productPage/Features'
 import ProductImages from '../components/productPage/ProductImages'
+import YouMayLike from '../components/productPage/YouMayLike'
 
 export default function ProductPage() {
 
@@ -18,8 +19,8 @@ export default function ProductPage() {
             <ProductHero />
             <Features />
             <ProductImages />
+            <YouMayLike />
             <ImageNav />
-
         </div>
     )
 }

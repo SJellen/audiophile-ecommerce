@@ -15,6 +15,11 @@ function ContextProvider({ children }) {
         setCurrentProduct(selection)
     }
 
+    function handleYouMayLikeClick(name) {
+        const product = data.filter(x => x.slug === name).pop()
+        setCurrentProduct(product)
+    }
+
     function lineBreakFix() {
         const splitArr = currentProduct.features.split("\n")
         setFeatureLineOne(splitArr[0])
@@ -28,7 +33,7 @@ function ContextProvider({ children }) {
     
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick}}>
             {children}
         </Context.Provider>
     )

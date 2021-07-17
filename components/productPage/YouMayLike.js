@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function YouMayLike() {
 
-    const {currentProduct, productPageQuantity} = useContext(Context)
+    const {currentProduct, handleYouMayLikeClick} = useContext(Context)
 
     return (
         <div className={styles.container}>
@@ -26,7 +26,7 @@ export default function YouMayLike() {
                     </div>
                     <h2 className={styles.productName}>{currentProduct.others[0].name}</h2>
                         <Link href="/productPage">
-                        <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a> 
+                        <a onClick={() => handleYouMayLikeClick(currentProduct.others[0].slug)}>SEE PRODUCT</a> 
                     </Link>
                 </div>
                 <div className={styles.productBox}>
@@ -43,7 +43,7 @@ export default function YouMayLike() {
                     </div>
                         <h2 className={styles.productName}>{currentProduct.others[1].name}</h2>
                         <Link href="/productPage">
-                            <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a> 
+                            <a onClick={() => handleYouMayLikeClick(currentProduct.others[1].slug)}>SEE PRODUCT</a> 
                        </Link>  
                 </div>
                 <div className={styles.productBox}>
@@ -60,7 +60,7 @@ export default function YouMayLike() {
                 </div>
                     <h2 className={styles.productName}>{currentProduct.others[2].name}</h2>
                     <Link href="/productPage">
-                        <a onClick={() => handleSeeProductClick(5)}>SEE PRODUCT</a> 
+                        <a onClick={() => handleYouMayLikeClick(currentProduct.others[2].slug)}>SEE PRODUCT</a> 
                     </Link>
                 </div>
             </div>  

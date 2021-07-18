@@ -26,6 +26,19 @@ function ContextProvider({ children }) {
         setFeatureLineTwo(splitArr[2])
     }
 
+    function handleProductPageDecrement() {
+        if (productPageQuantity === 1) return
+        if (productPageQuantity >= 1) {
+            setProductPageQuantity(prevState => prevState - 1)
+        }
+    }
+
+    function handleProductPageIncrement() {
+        if (productPageQuantity >= 1) {
+            setProductPageQuantity(prevState => prevState + 1)
+        }
+    }
+
     useEffect(() => {
         lineBreakFix()
     }, [currentProduct])
@@ -33,7 +46,7 @@ function ContextProvider({ children }) {
     
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement}}>
             {children}
         </Context.Provider>
     )

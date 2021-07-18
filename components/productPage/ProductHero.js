@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function ProductHero() {
 
-    const {currentProduct, productPageQuantity, handleProductPageDecrement, handleProductPageIncrement} = useContext(Context)
+    const {currentProduct, productPageQuantity, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick} = useContext(Context)
 
     return (
             <div className={styles.itemContainer} >
@@ -31,7 +31,7 @@ export default function ProductHero() {
                                 {productPageQuantity}
                                  <span className={styles.plus} onClick={handleProductPageIncrement}>+</span>
                             </div>
-                            <a>ADD TO CART</a>
+                            <a onClick={handleAddToCartClick}>ADD TO CART</a>
                         </div>    
                     </div>
                 </div>

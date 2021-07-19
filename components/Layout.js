@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BestGear from './BestGear'
+import Cart from './Cart'
 
 
 export default function Layout({children}) {
@@ -15,9 +16,11 @@ export default function Layout({children}) {
             <meta name="viewport" content="initial-scale=1.0, width=device-width" /> 
           </Head>
             <Header/>
+            <Cart />
             <main >
               {children}
             </main>
+            
             <BestGear />
             <Footer />
         </div>

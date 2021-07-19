@@ -9,6 +9,7 @@ function ContextProvider({ children }) {
     const [productPageQuantity, setProductPageQuantity] = useState(1)
     const [featureLineOne, setFeatureLineOne] = useState()
     const [featureLineTwo, setFeatureLineTwo] = useState()
+    const [isCartOpen, setIsCartOpen] = useState(true)
 
     function handleSeeProductClick(itemNumber) {
         let selection = data[itemNumber]
@@ -37,6 +38,11 @@ function ContextProvider({ children }) {
         if (productPageQuantity >= 1) {
             setProductPageQuantity(prevState => prevState + 1)
         }
+    }
+
+    function handleCartIconClick() {
+        if (isCartOpen)  setIsCartOpen(false)
+        if (!isCartOpen) setIsCartOpen(true)
     }
 
     useEffect(() => {
@@ -100,10 +106,9 @@ function ContextProvider({ children }) {
         setProductPageQuantity(1)
     }
 
-    console.log(cart)
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart}}>
             {children}
         </Context.Provider>
     )

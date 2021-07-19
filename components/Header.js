@@ -1,9 +1,12 @@
+import React, {useContext} from 'react'
 import styles from '../styles/Header.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Context} from '../context/Context'
 
 export default function Header() {
     
+    const {handleCartIconClick} = useContext(Context)
 
     return (
         <div className={styles.container} >
@@ -23,7 +26,7 @@ export default function Header() {
             </nav>
             <div className={styles.rightFlexContainer}>
                 <div className={styles.cartLogo}>
-                    <Image src="/assets/shared/desktop/icon-cart.svg" alt="cart icon" width="23" height="20"/>
+                    <Image src="/assets/shared/desktop/icon-cart.svg" alt="cart icon" width="23" height="20" onClick={() => handleCartIconClick()}/>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@
 
 .container {
     background-color: V.$white;
+    border: 1px solid blue;
     display: block;
     width: 377px;
     height: 75vh;
@@ -34,5 +35,24 @@
         font-weight: 100;
         font-size: 1rem;
         text-decoration: underline;
+    }
+    h3:hover {
+        cursor: pointer;
+    }
+}
+
+.itemContainer {
+    border: 1px solid gold;
+    width: 90%;
+    height: 64px;
+    margin: 1rem auto;
+
+}
+
+.imgContainer {
+    width: 64px;
+    height: auto;
+    .img {
+        border-radius: 5px;
     }
 }

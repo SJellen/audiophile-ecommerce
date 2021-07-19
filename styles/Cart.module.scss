@@ -2,19 +2,19 @@
 
 .container {
     background-color: V.$white;
-    border: 1px solid blue;
+    border: 1px solid red;
     display: block;
     width: 377px;
-    height: 75vh;
+    height: auto;
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     right: 11%;
     top: 7.5rem;
+    padding-bottom: 2rem;
 }
 
 .topCartContainer {
-    border: 1px solid red;
     width: 90%;
     height: 25px;
     margin: 2rem auto;
@@ -22,14 +22,11 @@
     justify-content: space-between;
     align-items: center;
     h2 {
-
-        border: 1px solid green;
         display: inline-block;
         font-size: 1.25rem;
         text-transform: uppercase;
     }
     h3 {
-        border: 1px solid blue;
         display: inline-block;
         color: V.$slate;
         font-weight: 100;
@@ -42,11 +39,40 @@
 }
 
 .itemContainer {
-    border: 1px solid gold;
     width: 90%;
     height: 64px;
     margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.leftContainer {
+    width: 200px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    .textContainer {
+
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 64px;
+        justify-content: center;
+        align-items: flex-start;
+        
+        h4 {
+            margin: 0rem auto;
+            width: 100%;
+            margin-left: 1rem
+        }
+        .name {
+            color: V.$black;
+        }
+        .price {
+            color: V.$slate;
+        }
+    }
 }
 
 .imgContainer {
@@ -54,5 +80,71 @@
     height: auto;
     .img {
         border-radius: 5px;
+    }
+}
+
+.rightContainer {
+    width: 100px;
+    height: auto;
+    .quantityBox {
+        background-color: V.$silver;
+        width: 96px;
+        height: 32px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: .75rem;
+        .plus {
+            color: #979797;
+        }
+        .plus:hover {
+            color: V.$orange;
+            cursor: pointer;
+        }
+        .minus {
+            color: #979797;
+        }
+        .minus:hover {
+            color: V.$orange;
+            cursor: pointer;
+        }
+    }
+}
+
+.bottomTextContainer {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .total {
+        color: V.$slate;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: .9rem;
+    }
+    .totalPrice {
+        font-weight: 600;
+    }
+}
+
+.buttonBox {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    a {
+        color: V.$white;
+        background-color: V.$orange;
+        padding: 1rem 1.5rem;
+        width: 100%;
+        height: 48px;
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
+    a:hover {
+        cursor: pointer;
+        background-color: V.$lightOrange;
     }
 }

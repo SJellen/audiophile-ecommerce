@@ -9,7 +9,7 @@ import image from 'next/image'
 export default function Cart() {
 
     const {isCartOpen, cart} = useContext(Context)
-    const {filteredCart, handleRemoveAllClick} = useCartLogic()
+    const {filteredCart, handleRemoveAllClick, totalPrice} = useCartLogic()
 
 
     const productMapping = filteredCart.map((item, index) => (
@@ -41,7 +41,7 @@ export default function Cart() {
             {productMapping}
             <div className={styles.bottomTextContainer}>
                 <h3 className={styles.total}>Total</h3>
-                <h3 className={styles.totalPrice.toLocaleString("en-US")}>$ 999999</h3>
+                <h3 className={styles.totalPrice}>$ {totalPrice().toLocaleString("en-US")}</h3>
             </div>
             <div className={styles.buttonBox}>
                 <a>CHECKOUT</a>

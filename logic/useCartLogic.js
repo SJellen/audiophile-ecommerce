@@ -55,15 +55,21 @@ export default function useCartLogic() {
 ])
     }
 
-    
+    function totalPrice() {
+        let total = 0
+        filteredCart.forEach(item => {
+        
+        total += item.price * item.quantity
+        
+        })
+        return total
+    }
 
-    useEffect(() => {
-        console.log(cart)
-    }, [cart])
+    console.log(filteredCart, totalPrice())
 
    
     
     
 
-    return {filteredCart, handleRemoveAllClick}
+    return {filteredCart, handleRemoveAllClick, totalPrice}
 }

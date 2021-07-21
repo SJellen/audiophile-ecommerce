@@ -9,7 +9,7 @@ import image from 'next/image'
 export default function Cart() {
 
     const {isCartOpen, cart} = useContext(Context)
-    const {filteredCart, handleRemoveAllClick, totalPrice} = useCartLogic()
+    const {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement} = useCartLogic()
 
 
     const productMapping = filteredCart.map((item, index) => (
@@ -25,9 +25,9 @@ export default function Cart() {
             </div>
             <div className={styles.rightContainer}>
                 <div className={styles.quantityBox}>
-                    <span className={styles.minus} >-</span>
+                    <span className={styles.minus} onClick={() => handleCartItemDecrement(index, filteredCart)}>-</span>
                                 {item.quantity}
-                    <span className={styles.plus} >+</span>
+                    <span className={styles.plus} onClick={() => handleCartItemDecrement(index, filteredCart)}>+</span>
                 </div>
             </div>
         </div>

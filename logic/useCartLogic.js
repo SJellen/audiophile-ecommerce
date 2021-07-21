@@ -65,11 +65,19 @@ export default function useCartLogic() {
         return total
     }
 
-    console.log(filteredCart, totalPrice())
+    function handleCartItemDecrement(e, arr) {
+        console.log(arr[e])
+    }
+
+    function handleCartItemIncrement(e, arr) {
+        console.log(arr[e])
+    }
+
+    
 
    
     
     
 
-    return {filteredCart, handleRemoveAllClick, totalPrice}
+    return {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement}
 }

@@ -3,11 +3,12 @@ import styles from '../styles/Cart.module.scss'
 import { Context} from '../context/Context'
 import useCartLogic from '../logic/useCartLogic'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Cart() {
 
-    const {isCartOpen, cart} = useContext(Context)
-    const {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement} = useCartLogic()
+    const {isCartOpen} = useContext(Context)
+    const {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement, handleHandleCartCheckoutClick} = useCartLogic()
 
 
     const productMapping = filteredCart.map((item, index) => (
@@ -42,7 +43,9 @@ export default function Cart() {
                 <h3 className={styles.totalPrice}>$ {totalPrice().toLocaleString("en-US")}</h3>
             </div>
             <div className={styles.buttonBox}>
-                <a>CHECKOUT</a>
+                <Link href="/checkout" >
+                    <a onClick={() => handleHandleCartCheckoutClick()}>CHECKOUT</a>
+                </Link>
             </div>
         </div>
     )

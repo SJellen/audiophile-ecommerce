@@ -10,7 +10,8 @@ function ContextProvider({ children }) {
     const [productPageQuantity, setProductPageQuantity] = useState(1)
     const [featureLineOne, setFeatureLineOne] = useState()
     const [featureLineTwo, setFeatureLineTwo] = useState()
-    const [isCartOpen, setIsCartOpen] = useState(true)
+    const [isCartOpen, setIsCartOpen] = useState(false)
+    const [isCheckout, setIsCheckout] = useState(false)
 
     function handleSeeProductClick(itemNumber) {
         let selection = data[itemNumber]
@@ -73,7 +74,7 @@ function ContextProvider({ children }) {
 
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen}}>
             {children}
         </Context.Provider>
     )

@@ -4,7 +4,7 @@ import { Context } from "../context/Context";
 
 export default function useCartLogic() {
 
-    const {cart, setCart} = useContext(Context)
+    const {cart, setCart, isCheckout, setIsCheckout, isCartOpen, setIsCartOpen} = useContext(Context)
 
     const filteredCart = cart.filter(x => x.quantity !== 0)
 
@@ -85,11 +85,16 @@ export default function useCartLogic() {
         setCart(updateCart)
     }
 
+    function handleHandleCartCheckoutClick() {
+        setIsCheckout(true)
+        setIsCartOpen(false) 
+    } 
+
     
-    console.log(cart)
+    console.log(isCheckout, isCartOpen)
    
     
     
 
-    return {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement}
+    return {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement, handleHandleCartCheckoutClick}
 }

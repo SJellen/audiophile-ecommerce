@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/home/Home.module.scss'
 import ImageNav from '../components/ImageNav'
 import Hero from '../components/home/Hero'
 import Midsection from '../components/home/Midsection'

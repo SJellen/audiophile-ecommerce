@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import styles from '../styles/ProductPage.module.scss'
+import styles from '../styles/productPage/ProductPage.module.scss'
 import Image from 'next/image'
 import {Context} from  '../context/Context'
 import ImageNav from '../components/ImageNav'

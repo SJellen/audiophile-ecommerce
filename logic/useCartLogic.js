@@ -58,23 +58,35 @@ export default function useCartLogic() {
     function totalPrice() {
         let total = 0
         filteredCart.forEach(item => {
-        
         total += item.price * item.quantity
-        
         })
         return total
     }
 
     function handleCartItemDecrement(e, arr) {
-        console.log(arr[e])
+        const selection = arr[e].name 
+        const productMatch = cart.find(x => x.name === selection)
+        productMatch.quantity -= 1
+        const updateCart = cart.map(p => {
+            if (productMatch.name === p.name) return productMatch
+            return p
+        })
+        setCart(updateCart)
     }
 
     function handleCartItemIncrement(e, arr) {
-        console.log(arr[e])
+        const selection = arr[e].name 
+        const productMatch = cart.find(x => x.name === selection)
+        productMatch.quantity += 1
+        const updateCart = cart.map(p => {
+            if (productMatch.name === p.name) return productMatch
+            return p
+        })
+        setCart(updateCart)
     }
 
     
-
+    console.log(cart)
    
     
     

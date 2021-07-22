@@ -3,13 +3,11 @@ import styles from '../styles/Cart.module.scss'
 import { Context} from '../context/Context'
 import useCartLogic from '../logic/useCartLogic'
 import Image from 'next/image'
-import image from 'next/image'
-
 
 export default function Cart() {
 
     const {isCartOpen, cart} = useContext(Context)
-    const {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement} = useCartLogic()
+    const {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement} = useCartLogic()
 
 
     const productMapping = filteredCart.map((item, index) => (
@@ -20,14 +18,14 @@ export default function Cart() {
                 </div>
                 <div className={styles.textContainer}>
                     <h4 className={styles.name}>{item.displayName}</h4>
-                    <h4 className={styles.price}>$ {item.price.toLocaleString("en-US")}</h4>
+                    <h4 className={styles.price}>$ {item.price?.toLocaleString("en-US")}</h4>
                 </div>
             </div>
             <div className={styles.rightContainer}>
                 <div className={styles.quantityBox}>
                     <span className={styles.minus} onClick={() => handleCartItemDecrement(index, filteredCart)}>-</span>
                                 {item.quantity}
-                    <span className={styles.plus} onClick={() => handleCartItemDecrement(index, filteredCart)}>+</span>
+                    <span className={styles.plus} onClick={() => handleCartItemIncrement(index, filteredCart)}>+</span>
                 </div>
             </div>
         </div>

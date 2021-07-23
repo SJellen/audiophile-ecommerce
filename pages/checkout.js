@@ -4,9 +4,9 @@ export default function Checkout() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.falseHeader}></div>
-
-            checkout
+            <div className={styles.header}></div>
+                <div className={styles.goBack}><h4>Go Back</h4></div>
+                <div className={styles.flexContainer}></div>
         </div>
     )
 }

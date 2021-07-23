@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import styles from '../../styles/ProductPage/Features.module.scss'
+import styles from '../../styles/productPage/Features.module.scss'
 import { Context } from '../../context/Context'
 
 export default function Features() {

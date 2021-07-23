@@ -27,15 +27,17 @@ export default function Summary() {
 
     return (
         <div className={styles.container}>
-            <div>SUMMARY</div>
+            <div className={styles.topContainer}><h3>SUMMARY</h3></div>
             {productMapping}
-            <div>
-                <h2>TOTAL $ {totalPrice()}</h2>
-                <h2>SHIPPING $ 50</h2>
-                <h2>VAT(INCLUDED) $ {vat}</h2>
-                <h2>GRAND TOTAL $ {totalPrice() + 50}</h2>
+            <div className={styles.bottomContainer}>
+                <h3>TOTAL <span>$ {(totalPrice()).toLocaleString("en-US")}</span></h3>
+                <h3>SHIPPING <span>$ 50</span></h3>
+                <h3>VAT(INCLUDED) <span>$ {vat.toLocaleString("en-US")}</span></h3>
+                <h3>GRAND TOTAL <span>$ {(totalPrice() + 50).toLocaleString("en-US")}</span></h3>
             </div>
-            <a>CONTINUE & PAY</a>
+            <div className={styles.buttonBox}>
+                <a>CONTINUE & PAY</a>
+            </div>
         </div>
     )
 }

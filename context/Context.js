@@ -67,6 +67,13 @@ function ContextProvider({ children }) {
         setProductPageQuantity(1)
     }
 
+    useEffect(() => {
+        const pathname = window.location.pathname
+        if (pathname === "/checkout")
+        setIsCheckout(true)
+
+    }, [])
+
     
 
     

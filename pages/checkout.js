@@ -4,6 +4,8 @@ export default function Checkout() {
 
     return (
         <div className={styles.container}>
+            <div className={styles.falseHeader}></div>
+
             checkout
         </div>
     )

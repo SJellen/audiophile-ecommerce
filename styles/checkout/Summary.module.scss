@@ -4,4 +4,68 @@
     border: 1px solid red;
     width: 350px;
     height: 612px;
+    background-color: V.$white;
 }
+
+
+
+.itemContainer {
+    width: 90%;
+    height: 64px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.leftContainer {
+    width: 200px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    .textContainer {
+
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 64px;
+        justify-content: center;
+        align-items: flex-start;
+        
+        h4 {
+            margin: 0rem auto;
+            width: 100%;
+            margin-left: 1rem
+        }
+        .name {
+            color: V.$black;
+        }
+        .price {
+            color: V.$slate;
+        }
+    }
+}
+
+.imgContainer {
+    width: 64px;
+    height: auto;
+    .img {
+        border-radius: 5px;
+    }
+}
+
+.rightContainer {
+    width: 100px;
+    height: auto;
+    .quantityBox {
+        width: 96px;
+        height: 32px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: .75rem;
+    }
+}
+

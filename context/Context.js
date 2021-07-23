@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import data from '../data/data.json'
 import items from '../data/cart.json'
+import useLocalStorageState from 'use-local-storage-state'
 
 const Context = React.createContext() 
 
@@ -53,7 +54,7 @@ function ContextProvider({ children }) {
 
     const initialCart = items
 
-    const [cart, setCart] = useState(initialCart)
+    const [cart, setCart] = useLocalStorageState('cart', initialCart)
 
 
     function handleAddToCartClick() {

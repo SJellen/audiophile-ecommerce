@@ -90,8 +90,7 @@ export default function useCartLogic() {
         setIsCartOpen(false) 
     } 
 
-    
-    console.log(isCheckout, isCartOpen)
+   
    
     
     

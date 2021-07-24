@@ -6,7 +6,12 @@ import Link from 'next/link'
 export default function Summary() {
 
     const {filteredCart, totalPrice} = useCheckoutLogic()
-    const vat = ((totalPrice() / 100) * 20).toFixed(0)
+    const vat = ((totalPrice() / 100) * 20).toLocaleString("en-US", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+      })
+
+    
 
      const productMapping = filteredCart.map((item, index) => (
         <div key={item[index]} className={styles.itemContainer}>
@@ -32,8 +37,8 @@ export default function Summary() {
             <div className={styles.bottomContainer}>
                 <h3>TOTAL <span>$ {(totalPrice()).toLocaleString("en-US")}</span></h3>
                 <h3>SHIPPING <span>$ 50</span></h3>
-                <h3>VAT(INCLUDED) <span>$ {vat.toLocaleString("en-US")}</span></h3>
-                <h3>GRAND TOTAL <span>$ {(totalPrice() + 50).toLocaleString("en-US")}</span></h3>
+                <h3>VAT  (INCLUDED) <span>$ {vat}</span></h3>
+                <h3>GRAND TOTAL <span className={styles.grandTotal}>$ {(totalPrice() + 50).toLocaleString("en-US")}</span></h3>
             </div>
             <div className={styles.buttonBox}>
                 <a>CONTINUE & PAY</a>

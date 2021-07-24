@@ -24,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
+    border: 1px solid blue;
 }
 
 .leftContainer {
@@ -32,16 +32,14 @@
     height: 64px;
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
+    border: 1px solid gold;
     .textContainer {
-
         display: flex;
         flex-direction: column;
-        width: 60%;
+        width: auto;
         height: 64px;
         justify-content: center;
         align-items: flex-start;
-        
         h4 {
             margin: 0rem auto;
             width: 100%;
@@ -65,7 +63,8 @@
 }
 
 .rightContainer {
-    height: auto;
+    width: 10%;
+    border: 1px solid blue;
     .quantityBox {
         width: auto;
         height: 32px;

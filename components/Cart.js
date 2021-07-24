@@ -25,7 +25,7 @@ export default function Cart() {
             <div className={styles.rightContainer}>
                 <div className={styles.quantityBox}>
                     <span className={styles.minus} onClick={() => handleCartItemDecrement(index, filteredCart)}>-</span>
-                                {item.quantity}
+                        <h4 className={styles.quantity}>{item.quantity}</h4>
                     <span className={styles.plus} onClick={() => handleCartItemIncrement(index, filteredCart)}>+</span>
                 </div>
             </div>

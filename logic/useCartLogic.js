@@ -12,7 +12,7 @@ export default function useCartLogic() {
         setCart([
     {
         "name": "YX1 Wireless Earphones",
-       " displayName": "YX1",
+        "displayName": "YX1",
         "price": 599,
         "image": "/assets/cart/image-yx1-earphones.jpg",
         "quantity": 0
@@ -28,7 +28,7 @@ export default function useCartLogic() {
         "name": "XX99 Mark I Headphones",
         "displayName": "XX99 MKI",
         "price": 1750,
-        "image": "/assets/cart/image-x99-mark-one-headphones.jpg",
+        "image": "/assets/cart/image-xx99-mark-one-headphones.jpg",
         "quantity": 0
     },
     {

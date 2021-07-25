@@ -7,7 +7,27 @@ export default function useCheckoutLogic() {
     const {cart, setCart, isCheckout, setIsCheckout, isCartOpen, setIsCartOpen} = useContext(Context)
     const {filteredCart, totalPrice} = useCartLogic()
 
-    console.log(filteredCart)
+    const [checkoutForm, setCheckoutForm] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        zip: '',
+        city: '',
+        country: '',
+        isEmoney: false,
+        emoney: '',
+        pin: '',
+        cod: false
+    })
 
-    return {filteredCart, totalPrice}
+    function handleChange(e) {
+        const value = e.target.value
+        setCheckoutForm({
+            ...checkoutForm,
+            [e.target.name]: value
+        })
+    }
+
+    return {filteredCart, totalPrice, checkoutForm, setCheckoutForm, handleChange}
 }

@@ -55,26 +55,31 @@ export default function Form() {
                 </div>
                 <div className={styles.shippingFlexContainer}>
                     <h4>SHIPPING INFO</h4>
-                    <label htmlFor="address">Address</label>
-                    <input
-                        onChange={handleChange}
-                        value={checkoutForm.address}
-                        type="text"
-                        id="address"
-                        name="address"
-                        placeholder="1137 Williams Avenue"
-                     />
-                    <label htmlFor="zip">ZIP code</label>
-                    <input
-                        onChange={handleChange}
-                        value={checkoutForm.zip}
-                        type="text"
-                        id="zip"
-                        name="zip"
-                        pattern="[0-9]{5}"
-                        placeholder="10001"
-                     />
-                     <label htmlFor="city">City</label>
+                    <div className={styles.inputShippingAddressFlex}>
+                        <label htmlFor="address">Address</label>
+                        <input
+                            onChange={handleChange}
+                            value={checkoutForm.address}
+                            type="text"
+                            id="address"
+                            name="address"
+                            placeholder="1137 Williams Avenue"
+                        />
+                    </div>
+                    <div className={styles.inputShippingFlex}>
+                        <label htmlFor="zip">ZIP code</label>
+                        <input
+                            onChange={handleChange}
+                            value={checkoutForm.zip}
+                            type="text"
+                            id="zip"
+                            name="zip"
+                            pattern="[0-9]{5}"
+                            placeholder="10001"
+                        />
+                    </div>
+                    <div className={styles.inputShippingFlex}>
+                        <label htmlFor="city">City</label>
                      <input
                         onChange={handleChange}
                         value={checkoutForm.city}
@@ -83,7 +88,9 @@ export default function Form() {
                         name="city"
                         placeholder="New York"
                      />
-                     <label htmlFor="country">Country</label>
+                    </div>
+                    <div className={styles.inputShippingFlex}>
+                        <label htmlFor="country">Country</label>
                      <input
                         onChange={handleChange}
                         value={checkoutForm.country}
@@ -92,6 +99,10 @@ export default function Form() {
                         name="country"
                         placeholder="United States"
                      />
+                    </div>
+                    
+                     
+                     
                 </div>
                 <div className={styles.paymentFlexContainer}>
                     <h4>PAYMENT DETAILS</h4>

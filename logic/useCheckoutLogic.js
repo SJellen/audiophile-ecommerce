@@ -7,7 +7,7 @@ export default function useCheckoutLogic() {
     const {cart, setCart, isCheckout, setIsCheckout, isCartOpen, setIsCartOpen} = useContext(Context)
     const {filteredCart, totalPrice} = useCartLogic()
 
-    const [checkoutForm, setCheckoutForm] = useState({
+    const initialForm = {
         name: '',
         email: '',
         phone: '',
@@ -19,7 +19,9 @@ export default function useCheckoutLogic() {
         emoney: '',
         pin: '',
         cod: false
-    })
+    }
+
+    const [checkoutForm, setCheckoutForm] = useState(initialForm)
 
     function handleChange(e) {
         const value = e.target.value
@@ -29,5 +31,13 @@ export default function useCheckoutLogic() {
         })
     }
 
-    return {filteredCart, totalPrice, checkoutForm, setCheckoutForm, handleChange}
+    function handleSubmit(event) {
+        event.preventDefault()
+        console.log("submit")
+        setCheckoutForm(initialForm)
+        
+        
+    }
+
+    return {filteredCart, totalPrice, checkoutForm, setCheckoutForm, handleChange, handleSubmit}
 }

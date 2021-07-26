@@ -3,7 +3,7 @@ import useCheckoutLogic from '../../logic/useCheckoutLogic'
 
 export default function Form() {
 
-    const {checkoutForm, setCheckoutForm, handleChange} = useCheckoutLogic()
+    const {checkoutForm, setCheckoutForm, handleChange, handleSubmit} = useCheckoutLogic()
 
     console.log(checkoutForm)
 
@@ -12,7 +12,7 @@ export default function Form() {
     return (
         <div className={styles.container}>
             <h1 className={styles.h1}>CHECKOUT</h1>
-            <form>
+            <form id="checkout" onSubmit={handleSubmit} >
                 <div className={styles.billingFlexContainer}>
                     <h4>BILLING DETAILS</h4>
                     <label htmlFor="name">Name</label>

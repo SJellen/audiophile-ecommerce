@@ -12,7 +12,7 @@ export default function Cart() {
 
 
     const productMapping = filteredCart.map((item, index) => (
-        <div key={item[index]} className={styles.itemContainer}>
+        <div key={index} className={styles.itemContainer}>
             <div className={styles.leftContainer}>
                 <div className={styles.imgContainer}>
                     <Image src={item.image} alt="product thumbnail" width="150" height="150"  className={styles.img}/>

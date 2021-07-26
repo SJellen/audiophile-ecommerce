@@ -14,7 +14,7 @@ export default function Summary() {
     
 
      const productMapping = filteredCart.map((item, index) => (
-        <div key={item[index]} className={styles.itemContainer}>
+        <div key={index} className={styles.itemContainer}>
             <div className={styles.leftContainer}>
                 <div className={styles.imgContainer}>
                     <Image src={item.image} alt="product thumbnail" width="150" height="150"  className={styles.img}/>
@@ -41,7 +41,7 @@ export default function Summary() {
                 <h3>GRAND TOTAL <span className={styles.grandTotal}>$ {(totalPrice() + 50).toLocaleString("en-US")}</span></h3>
             </div>
             <div className={styles.buttonBox}>
-                <a>CONTINUE & PAY</a>
+                <button form="checkout" type="submit">CONTINUE & PAY</button>
             </div>
         </div>
     )

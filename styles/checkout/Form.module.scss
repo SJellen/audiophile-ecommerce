@@ -5,26 +5,55 @@
     width: 65%;
     height: 100%;
     background-color: V.$white;
+    border-radius: 10px;
+    form {
+        width: 85%;
+        margin: 0 auto;
+    }
 }
 
 .h1 {
     border: 1px solid blue;
+    width: 85%;
+    margin: 4rem auto;
+    letter-spacing: 2px;
 }
 
 .billingFlexContainer {
     border: 1px solid green;
+
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
 }
 
 .shippingFlexContainer {
     border: 1px solid gold;
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
 }
 
 .paymentFlexContainer {
     border: 1px solid orange;
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
 }
 
 .paymentSelect {
     border: 1px solid red;
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
 
 }
 
@@ -38,6 +67,11 @@
 
 .emoneyContainer {
     background-color: green;
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
 }
 
 .codContainer {

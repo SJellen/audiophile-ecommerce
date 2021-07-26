@@ -1,7 +1,6 @@
 @use '../variables' as V;
 
 .container {
-    border: 1px solid red;
     width: 65%;
     height: 100%;
     background-color: V.$white;
@@ -13,15 +12,40 @@
 }
 
 .h1 {
-    border: 1px solid blue;
     width: 85%;
-    margin: 4rem auto;
+    margin: 4rem auto 2rem auto;
     letter-spacing: 2px;
 }
 
+
+
 .billingFlexContainer {
     border: 1px solid green;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .inputBillingFlex {
+    border: 1px solid red;
+    width: 49%;
+    margin: 1rem 0;
+    }
+    label {
+        color: red;
+        font-size: .75rem;
+    }
+    h4 {
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+        border: 1px solid gold;
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        height: 55px;
+        border-radius: 5px;
+        border: 1px solid V.$slate;
+    }
     input:hover {
         border: 1px solid V.$orange;
         cursor: pointer;
@@ -29,8 +53,15 @@
     }
 }
 
+
+
 .shippingFlexContainer {
     border: 1px solid gold;
+    h4 {
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+    }
     input:hover {
         border: 1px solid V.$orange;
         cursor: pointer;
@@ -40,6 +71,11 @@
 
 .paymentFlexContainer {
     border: 1px solid orange;
+    h4 {
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+    }
     input:hover {
         border: 1px solid V.$orange;
         cursor: pointer;
@@ -49,6 +85,11 @@
 
 .paymentSelect {
     border: 1px solid red;
+    h4 {
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+    }
     input:hover {
         border: 1px solid V.$orange;
         cursor: pointer;

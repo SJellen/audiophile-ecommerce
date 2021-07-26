@@ -15,34 +15,43 @@ export default function Form() {
             <form id="checkout" onSubmit={handleSubmit} >
                 <div className={styles.billingFlexContainer}>
                     <h4>BILLING DETAILS</h4>
-                    <label htmlFor="name">Name</label>
-                    <input
-                        onChange={handleChange}
-                        value={checkoutForm.name}
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Alexei Ward"
-                     />
-                    <label htmlFor="email">Email Address</label><span>Wrong Format</span>
-                    <input
-                        onChange={handleChange}
-                        value={checkoutForm.email}
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="alexei@email.com"
-                     />
-                     <label htmlFor="phone">Phone Number</label>
-                     <input
-                        onChange={handleChange}
-                        value={checkoutForm.phone}
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        pattern="[0-9]{11}"
-                        placeholder="+1 202-555-0136"
-                     />
+                        <div className={styles.inputBillingFlex}>
+                           <label htmlFor="name">Name<br></br>
+                            <input
+                                onChange={handleChange}
+                                value={checkoutForm.name}
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Alexei Ward"
+                            />
+                        </label> 
+                        </div>
+                        <div className={styles.inputBillingFlex}>
+                            <label htmlFor="email">Email Address<br></br>
+                            <input
+                                onChange={handleChange}
+                                value={checkoutForm.email}
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="alexei@email.com"
+                            />
+                        </label>
+                        </div>
+                        <div className={styles.inputBillingFlex}>
+                            <label htmlFor="phone">Phone Number<br></br>
+                            <input
+                                onChange={handleChange}
+                                value={checkoutForm.phone}
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                pattern="[0-9]{11}"
+                                placeholder="+1 202-555-0136"
+                            />
+                        </label>
+                        </div>         
                 </div>
                 <div className={styles.shippingFlexContainer}>
                     <h4>SHIPPING INFO</h4>

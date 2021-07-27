@@ -108,8 +108,22 @@ export default function Form() {
                     <h4>PAYMENT DETAILS</h4>
                     <h5>Payment Method</h5>
                         <div className={styles.paymentSelect}>
-                            <input type="radio" className={styles.emoney}></input><label>e-Money</label>
-                            <input type="radio" className={styles.cod}></input><label>Cash on Delivery</label>
+                            <input 
+                                onChange={handleChange}
+                                type="radio" 
+                                className={styles.emoney}
+                                id="isEmoney" 
+                                value="emoney"
+                                name="paymentChoice" />
+                                <label htmlFor="paymentChoice1" >e-Money</label>
+                            <input 
+                                onChange={handleChange}
+                                type="radio" 
+                                className={styles.cod} 
+                                id="cod"
+                                value="cod"
+                                name="paymentChoice" />
+                                <label htmlFor="paymentChoice2">Cash on Delivery</label>
                         </div>
                         <div className={styles.emoneyContainer}>
                             <label htmlFor="emoney">e-Money Number</label>

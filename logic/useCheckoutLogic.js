@@ -15,10 +15,9 @@ export default function useCheckoutLogic() {
         zip: '',
         city: '',
         country: '',
-        isEmoney: false,
+        paymentChoice: "",
         emoney: '',
         pin: '',
-        cod: false
     }
 
     const [checkoutForm, setCheckoutForm] = useState(initialForm)
@@ -33,7 +32,7 @@ export default function useCheckoutLogic() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log("submit")
+        console.log(checkoutForm)
         setCheckoutForm(initialForm)
         
         

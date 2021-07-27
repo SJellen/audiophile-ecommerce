@@ -3,7 +3,7 @@ import useCheckoutLogic from '../../logic/useCheckoutLogic'
 
 export default function Form() {
 
-    const {checkoutForm, setCheckoutForm, handleChange, handleSubmit} = useCheckoutLogic()
+    const {checkoutForm, handleChange, handleSubmit} = useCheckoutLogic()
 
     console.log(checkoutForm)
 
@@ -108,8 +108,8 @@ export default function Form() {
                     <h4>PAYMENT DETAILS</h4>
                     <h5>Payment Method</h5>
                         <div className={styles.paymentSelect}>
-                            <div className={styles.emoney}><span></span>e-Money</div>
-                            <div className={styles.cod}><span></span>Cash on Delivery</div>
+                            <input type="radio" className={styles.emoney}></input><label>e-Money</label>
+                            <input type="radio" className={styles.cod}></input><label>Cash on Delivery</label>
                         </div>
                         <div className={styles.emoneyContainer}>
                             <label htmlFor="emoney">e-Money Number</label>

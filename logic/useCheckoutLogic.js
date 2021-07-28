@@ -63,6 +63,26 @@ export default function useCheckoutLogic() {
             document.querySelector("#address").style.borderWidth = "2px";
             document.querySelector(".address").style.color = "#f96262";
         }
+        if (checkoutForm.zip.length !== 5) {
+            document.querySelector("#zip").style.borderColor = "#f96262";
+            document.querySelector("#zipLabel").style.display = "flex";
+            document.querySelector("#zip").style.borderWidth = "2px";
+            document.querySelector(".zip").style.color = "#f96262";
+        }
+        if (checkoutForm.city.length === 0) {
+            document.querySelector("#city").style.borderColor = "#f96262";
+            document.querySelector("#cityLabel").style.display = "flex";
+            document.querySelector("#city").style.borderWidth = "2px";
+            document.querySelector(".city").style.color = "#f96262";
+        }
+        if (checkoutForm.country.length === 0) {
+            document.querySelector("#country").style.borderColor = "#f96262";
+            document.querySelector("#countryLabel").style.display = "flex";
+            document.querySelector("#country").style.borderWidth = "2px";
+            document.querySelector(".country").style.color = "#f96262";
+        }
+
+        
 
         
         

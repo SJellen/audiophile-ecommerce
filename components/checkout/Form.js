@@ -33,7 +33,7 @@ export default function Form() {
                     </div>
                     <div className={styles.inputShippingFlex}>
                         <label htmlFor="zip" className="zip">ZIP code<span id="zipLabel">Must Be 5 Digits</span></label>
-                        <input onChange={handleChange} value={checkoutForm.zip} type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="10001" />
+                        <input onChange={handleChange} value={checkoutForm.zip} type="number" id="zip" name="zip" placeholder="10001" />
                     </div>
                     <div className={styles.inputShippingFlex}>
                         <label htmlFor="city" className="city">City<span id="cityLabel">Enter A City Name</span></label>
@@ -54,9 +54,9 @@ export default function Form() {
                                 <label htmlFor="paymentChoice2">Cash on Delivery</label>
                         </div>
                         <div className={styles.emoneyContainer} style={{display: checkoutForm.paymentChoice === "emoney" ? "block": "none"}}>
-                            <label htmlFor="emoney" className="emoney">e-Money Number<span id="nameLabel">Must Be 9 Digits</span></label>
+                            <label htmlFor="emoney" className="emoney">e-Money Number<span id="emoneyLabel">Must Be 9 Digits</span></label>
                                 <input onChange={handleChange} value={checkoutForm.emoney} type="text" id="emoney" name="emoney" pattern="[0-9]{9}" placeholder="238521993" />
-                            <label htmlFor="pin" className="pin">e-Money PIN<span id="nameLabel">Must Be 4 Digits</span></label>
+                            <label htmlFor="pin" className="pin">e-Money PIN<span id="pinLabel">Must Be 4 Digits</span></label>
                                 <input onChange={handleChange} value={checkoutForm.pin} type="text" id="pin" name="pin" pattern="[0-9]{4}" placeholder="6891" />    
                         </div>
                         <div className={styles.codContainer} style={{display: checkoutForm.paymentChoice === "cod" ? "block": "none"}}>

@@ -23,7 +23,6 @@
     justify-content: space-between;
     margin: 2rem auto;
     .inputBillingFlex {
-    border: 1px solid red;
     width: 49%;
     margin: 1rem 0;
     }
@@ -32,6 +31,10 @@
         font-size: .75rem;
         display: flex;
         justify-content: space-between;
+        margin-bottom: .5rem;
+        span {
+            display: none;
+        }
     }
     h4 {
         color: V.$orange;
@@ -51,6 +54,8 @@
         cursor: pointer;
         caret-color: V.$orange;
     }
+
+    
 }
 
 
@@ -70,10 +75,12 @@
         margin: 1rem 0;
     }
         label {
-            color: red;
             font-size: .75rem;
             display: flex;
             justify-content: space-between;
+            span {
+                display: none;
+            }
         }
         h4 {
             color: V.$orange;

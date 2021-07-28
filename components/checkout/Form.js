@@ -22,25 +22,25 @@ export default function Form() {
                         </div>
                         <div className={styles.inputBillingFlex}>
                             <label htmlFor="phone" className="phone">Phone Number<span id="phoneLabel">Must Be 11 Digits</span></label>
-                            <input onChange={handleChange} value={checkoutForm.phone} type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="+1 202-555-0136" />
+                            <input onChange={handleChange} value={checkoutForm.phone} type="text" id="phone" name="phone" placeholder="+1 202-555-0136" />
                         </div>         
                 </div>
                 <div className={styles.shippingFlexContainer}>
                     <h4>SHIPPING INFO</h4>
                     <div className={styles.inputShippingAddressFlex}>
-                        <label htmlFor="address" className="address">Address<span id="nameLabel">Enter An Address</span></label>
+                        <label htmlFor="address" className="address">Address<span id="addressLabel">Enter An Address</span></label>
                         <input onChange={handleChange} value={checkoutForm.address} type="text" id="address" name="address" placeholder="1137 Williams Avenue" />
                     </div>
                     <div className={styles.inputShippingFlex}>
-                        <label htmlFor="zip" className="zip">ZIP code<span id="nameLabel">Must Be 5 Digits</span></label>
+                        <label htmlFor="zip" className="zip">ZIP code<span id="zipLabel">Must Be 5 Digits</span></label>
                         <input onChange={handleChange} value={checkoutForm.zip} type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="10001" />
                     </div>
                     <div className={styles.inputShippingFlex}>
-                        <label htmlFor="city" className="city">City<span id="nameLabel">Enter A City Name</span></label>
+                        <label htmlFor="city" className="city">City<span id="cityLabel">Enter A City Name</span></label>
                      <input onChange={handleChange} value={checkoutForm.city} type="text" id="city" name="city" placeholder="New York" />
                     </div>
                     <div className={styles.inputShippingFlex}>
-                        <label htmlFor="country" className="country">Country<span id="nameLabel">Enter A City</span></label>
+                        <label htmlFor="country" className="country">Country<span id="countryLabel">Enter A Country</span></label>
                      <input onChange={handleChange} value={checkoutForm.country} type="text" id="country" name="country" placeholder="United States" />
                     </div>   
                 </div>

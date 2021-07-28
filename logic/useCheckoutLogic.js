@@ -4,7 +4,6 @@ import useCartLogic from "./useCartLogic";
 
 export default function useCheckoutLogic() {
 
-    const {cart, setCart, isCheckout, setIsCheckout, isCartOpen, setIsCartOpen} = useContext(Context)
     const {filteredCart, totalPrice} = useCartLogic()
 
     const initialForm = {
@@ -51,9 +50,21 @@ export default function useCheckoutLogic() {
             document.querySelector("#emailLabel").style.display = "flex";
             document.querySelector("#email").style.borderWidth = "2px";
             document.querySelector(".email").style.color = "#f96262";
+        } 
+        if ((checkoutForm.phone.match(/\d/g)?.length === 11) === false || checkoutForm.phone.length === null) {
+            document.querySelector("#phone").style.borderColor = "#f96262";
+            document.querySelector("#phoneLabel").style.display = "flex";
+            document.querySelector("#phone").style.borderWidth = "2px";
+            document.querySelector(".phone").style.color = "#f96262";
+        }
+        if (checkoutForm.address.length === 0) {
+            document.querySelector("#address").style.borderColor = "#f96262";
+            document.querySelector("#addressLabel").style.display = "flex";
+            document.querySelector("#address").style.borderWidth = "2px";
+            document.querySelector(".address").style.color = "#f96262";
         }
 
-        console.log(validateEmail(checkoutForm.email))
+        
         
 
         // document.querySelector("#email").style.borderColor = "#f96262";

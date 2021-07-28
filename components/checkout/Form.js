@@ -13,19 +13,16 @@ export default function Form() {
                 <div className={styles.billingFlexContainer}>
                     <h4>BILLING DETAILS</h4>
                         <div className={styles.inputBillingFlex}>
-                           <label htmlFor="name">Name<br></br>
+                           <label htmlFor="name">Name</label> 
                            <input onChange={handleChange} value={checkoutForm.name} type="text" id="name" name="name" placeholder="Alexei Ward" />
-                        </label> 
                         </div>
                         <div className={styles.inputBillingFlex}>
-                            <label htmlFor="email">Email Address<br></br>
+                            <label htmlFor="email">Email Address<span>Wrong Format</span></label>
                             <input onChange={handleChange} value={checkoutForm.email} type="email" id="email" name="email" placeholder="alexei@email.com" />
-                        </label>
                         </div>
                         <div className={styles.inputBillingFlex}>
-                            <label htmlFor="phone">Phone Number<br></br>
+                            <label htmlFor="phone">Phone Number<span>Must Be 11 Digits</span></label>
                             <input onChange={handleChange} value={checkoutForm.phone} type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="+1 202-555-0136" />
-                        </label>
                         </div>         
                 </div>
                 <div className={styles.shippingFlexContainer}>
@@ -35,7 +32,7 @@ export default function Form() {
                         <input onChange={handleChange} value={checkoutForm.address} type="text" id="address" name="address" placeholder="1137 Williams Avenue" />
                     </div>
                     <div className={styles.inputShippingFlex}>
-                        <label htmlFor="zip">ZIP code</label>
+                        <label htmlFor="zip">ZIP code<span>Must Be 5 Digits</span></label>
                         <input onChange={handleChange} value={checkoutForm.zip} type="text" id="zip" name="zip" pattern="[0-9]{5}" placeholder="10001" />
                     </div>
                     <div className={styles.inputShippingFlex}>
@@ -57,9 +54,9 @@ export default function Form() {
                                 <label htmlFor="paymentChoice2">Cash on Delivery</label>
                         </div>
                         <div className={styles.emoneyContainer} style={{display: checkoutForm.paymentChoice === "emoney" ? "block": "none"}}>
-                            <label htmlFor="emoney">e-Money Number</label>
+                            <label htmlFor="emoney">e-Money Number<span>Must Be 9 Digits</span></label>
                                 <input onChange={handleChange} value={checkoutForm.emoney} type="text" id="emoney" name="emoney" pattern="[0-9]{9}" placeholder="238521993" />
-                            <label htmlFor="pin">e-Money PIN</label>
+                            <label htmlFor="pin">e-Money PIN<span>Must Be 4 Digits</span></label>
                                 <input onChange={handleChange} value={checkoutForm.pin} type="text" id="pin" name="pin" pattern="[0-9]{4}" placeholder="6891" />    
                         </div>
                         <div className={styles.codContainer} style={{display: checkoutForm.paymentChoice === "cod" ? "block": "none"}}>

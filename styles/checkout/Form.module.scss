@@ -17,10 +17,7 @@
     letter-spacing: 2px;
 }
 
-
-
 .billingFlexContainer {
-    border: 1px solid green;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -31,14 +28,15 @@
     margin: 1rem 0;
     }
     label {
-        color: red;
+        color: V.$black;
         font-size: .75rem;
+        display: flex;
+        justify-content: space-between;
     }
     h4 {
         color: V.$orange;
         letter-spacing: 1px;
         font-size: .8rem;
-        border: 1px solid gold;
         width: 100%;
     }
     input {
@@ -47,6 +45,7 @@
         border-radius: 5px;
         border: 1px solid V.$slate;
     }
+
     input:hover {
         border: 1px solid V.$orange;
         cursor: pointer;
@@ -55,9 +54,7 @@
 }
 
 
-
 .shippingFlexContainer {
-    border: 1px solid gold;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -75,12 +72,13 @@
         label {
             color: red;
             font-size: .75rem;
+            display: flex;
+            justify-content: space-between;
         }
         h4 {
             color: V.$orange;
             letter-spacing: 1px;
             font-size: .8rem;
-            border: 1px solid gold;
             width: 100%;
         }
         input {

@@ -34,67 +34,82 @@ export default function useCheckoutLogic() {
             return re.test(String(email).toLowerCase());
     }
 
+    function errorStyles(element) {
+            document.querySelector(`#${element}`).style.borderColor = "#f96262";
+            document.querySelector(`#${element}Label`).style.display = "flex";
+            document.querySelector(`#${element}`).style.borderWidth = "2px";
+            document.querySelector(`.${element}`).style.color = "#f96262";
+    }
+
+    function defaultStyles(element) {
+        document.querySelector(`#${element}`).style.borderColor = "";
+        document.querySelector(`#${element}Label`).style.display = "";
+        document.querySelector(`#${element}`).style.borderWidth = "";
+        document.querySelector(`.${element}`).style.color = "";
+}
+
 
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log(checkoutForm)
+        if (checkoutForm.paymentChoice === "cod") {
+            if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && checkoutForm.zip.length === 5 && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0) {
+            setCheckoutForm(initialForm)
+        }}
+        if (checkoutForm.paymentChoice === "emoney") {
+            if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && checkoutForm.zip.length === 5 && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0 && checkoutForm.emoney.length === 9 && checkoutForm.pin.length === 4 ) {
+                setCheckoutForm(initialForm)  
+            }
+        }
+        
         if (checkoutForm.name.length === 0) {
-            document.querySelector("#name").style.borderColor = "#f96262";
-            document.querySelector("#nameLabel").style.display = "flex";
-            document.querySelector("#name").style.borderWidth = "2px";
-            document.querySelector(".name").style.color = "#f96262";
+            errorStyles("name")
+        } else {
+            defaultStyles("name")
         }
         if (validateEmail(checkoutForm.email) === false) {
-            document.querySelector("#email").style.borderColor = "#f96262";
-            document.querySelector("#emailLabel").style.display = "flex";
-            document.querySelector("#email").style.borderWidth = "2px";
-            document.querySelector(".email").style.color = "#f96262";
-        } 
+            errorStyles("email")
+        }  else {
+            defaultStyles("email")
+        }
         if ((checkoutForm.phone.match(/\d/g)?.length === 11) === false || checkoutForm.phone.length === null) {
-            document.querySelector("#phone").style.borderColor = "#f96262";
-            document.querySelector("#phoneLabel").style.display = "flex";
-            document.querySelector("#phone").style.borderWidth = "2px";
-            document.querySelector(".phone").style.color = "#f96262";
+            errorStyles("phone")
+        }  else {
+            defaultStyles("phone")
         }
         if (checkoutForm.address.length === 0) {
-            document.querySelector("#address").style.borderColor = "#f96262";
-            document.querySelector("#addressLabel").style.display = "flex";
-            document.querySelector("#address").style.borderWidth = "2px";
-            document.querySelector(".address").style.color = "#f96262";
+            errorStyles("address")
+        }  else {
+            defaultStyles("address")
         }
         if (checkoutForm.zip.length !== 5) {
-            document.querySelector("#zip").style.borderColor = "#f96262";
-            document.querySelector("#zipLabel").style.display = "flex";
-            document.querySelector("#zip").style.borderWidth = "2px";
-            document.querySelector(".zip").style.color = "#f96262";
+            errorStyles("zip")
+        }  else {
+            defaultStyles("zip")
         }
         if (checkoutForm.city.length === 0) {
-            document.querySelector("#city").style.borderColor = "#f96262";
-            document.querySelector("#cityLabel").style.display = "flex";
-            document.querySelector("#city").style.borderWidth = "2px";
-            document.querySelector(".city").style.color = "#f96262";
+            errorStyles("city")
+        }  else {
+            defaultStyles("city")
         }
         if (checkoutForm.country.length === 0) {
-            document.querySelector("#country").style.borderColor = "#f96262";
-            document.querySelector("#countryLabel").style.display = "flex";
-            document.querySelector("#country").style.borderWidth = "2px";
-            document.querySelector(".country").style.color = "#f96262";
+            errorStyles("country")
+        }  else {
+            defaultStyles("country")
         }
-
-        
-
-        
-        
-
-        // document.querySelector("#email").style.borderColor = "#f96262";
-        // document.querySelector("#emailLabel").style.display = "flex";
-        // document.querySelector("#email").style.borderWidth = "2px";
-        // document.querySelector(".email").style.color = "#f96262";
-        
-        // setCheckoutForm(initialForm)
-        
-        
+        if (checkoutForm.paymentChoice === "emoney") {
+            if (checkoutForm.emoney.length !== 9 ) {
+                errorStyles("emoney")
+            }  else {
+                defaultStyles("emoney")
+            }
+            if (checkoutForm.pin.length !== 4 ) {
+                errorStyles("pin")
+            }  else {
+                defaultStyles("pin")
+            }
+        }
+ 
     }
 
     return {filteredCart, totalPrice, checkoutForm, setCheckoutForm, handleChange, handleSubmit}

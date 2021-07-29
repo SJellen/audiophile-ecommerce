@@ -34,6 +34,19 @@ export default function useCheckoutLogic() {
             return re.test(String(email).toLowerCase());
     }
 
+    function validateZipCode(zipCode){
+        var zipCodePattern = /^\d{5}$|^\d{5}-\d{4}$/
+         return zipCodePattern.test(zipCode)
+    }
+
+    function validateEmoney(pin){
+        return /^\d{9}$/.test(pin);
+     }
+
+    function validatePIN(pin) {
+        return /^\d{4}$/.test(pin);
+    }
+
     function errorStyles(element) {
             document.querySelector(`#${element}`).style.borderColor = "#f96262";
             document.querySelector(`#${element}Label`).style.display = "flex";
@@ -53,11 +66,11 @@ export default function useCheckoutLogic() {
     function handleSubmit(event) {
         event.preventDefault()
         if (checkoutForm.paymentChoice === "cod") {
-            if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && checkoutForm.zip.length === 5 && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0) {
+            if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && validateZipCode(checkoutForm.zip) === true && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0) {
             setCheckoutForm(initialForm)
         }}
         if (checkoutForm.paymentChoice === "emoney") {
-            if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && checkoutForm.zip.length === 5 && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0 && checkoutForm.emoney.length === 9 && checkoutForm.pin.length === 4 ) {
+            if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && validateZipCode(checkoutForm.zip) === true && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0 && validateEmoney(checkoutForm.emoney) === true && validatePIN(checkoutForm.pin) === true) {
                 setCheckoutForm(initialForm)  
             }
         }
@@ -82,7 +95,7 @@ export default function useCheckoutLogic() {
         }  else {
             defaultStyles("address")
         }
-        if (checkoutForm.zip.length !== 5) {
+        if (validateZipCode(checkoutForm.zip) !== true) {
             errorStyles("zip")
         }  else {
             defaultStyles("zip")
@@ -98,12 +111,12 @@ export default function useCheckoutLogic() {
             defaultStyles("country")
         }
         if (checkoutForm.paymentChoice === "emoney") {
-            if (checkoutForm.emoney.length !== 9 ) {
+            if (validateEmoney(checkoutForm.emoney) !== true) {
                 errorStyles("emoney")
             }  else {
                 defaultStyles("emoney")
             }
-            if (checkoutForm.pin.length !== 4 ) {
+            if (validatePIN(checkoutForm.pin) !== true) {
                 errorStyles("pin")
             }  else {
                 defaultStyles("pin")

@@ -32,8 +32,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: .5rem;
+        font-weight: 700;
         span {
             display: none;
+            font-weight: 400;
         }
     }
     h4 {
@@ -53,6 +55,9 @@
         border: 1px solid V.$orange;
         cursor: pointer;
         caret-color: V.$orange;
+    }
+    input::placeholder {
+        padding-left: 1rem
     }
 
     
@@ -76,8 +81,10 @@
             font-size: .75rem;
             display: flex;
             justify-content: space-between;
+            font-weight: 700;
             span {
-                display: none;
+            display: none;
+            font-weight: 400;
             }
         }
         h4 {
@@ -96,6 +103,9 @@
             border: 1px solid V.$orange;
             cursor: pointer;
             caret-color: V.$orange;
+        }
+        input::placeholder {
+            padding-left: 1rem
         }
 }
 

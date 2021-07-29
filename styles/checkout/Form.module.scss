@@ -2,9 +2,10 @@
 
 .container {
     width: 65%;
-    height: 100%;
+    height: 105%;
     background-color: V.$white;
     border-radius: 10px;
+
     form {
         width: 85%;
         margin: 0 auto;
@@ -82,6 +83,7 @@
             display: flex;
             justify-content: space-between;
             font-weight: 700;
+            margin-bottom: .5rem;
             span {
             display: none;
             font-weight: 400;
@@ -115,10 +117,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 2rem auto;
+    height: auto;
     h4 {
         color: V.$orange;
         letter-spacing: 1px;
         font-size: .8rem;
+        width: 100%;
+        height: 25px;
+    }
+    h5 {
+        margin-top: .25rem;
     }
     input:hover {
         border: 1px solid V.$orange;
@@ -128,27 +136,46 @@
 }
 
 .paymentSelect {
-    border: 1px solid red;
-    h4 {
-        color: V.$orange;
-        letter-spacing: 1px;
-        font-size: .8rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .methodContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 55px;
+        border-radius: 5px;
+        border: 1px solid V.$slate;
+        margin: .5rem auto;
+        font-size: .9rem;
+        font-weight: 600;
     }
-    input:hover {
+    .methodContainer:hover {
         border: 1px solid V.$orange;
         cursor: pointer;
         caret-color: V.$orange;
     }
-
+    h4 {
+        border: 1px solid V.$orange;
+        color: V.$orange;
+        letter-spacing: 1px;
+        font-size: .8rem;
+    }
+    label {
+        margin-left: 1rem;
+    }
+    input {
+        margin-left: 1rem;
+    }
+    
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }  
 }
 
-.emoney {
-    background-color: red;
-}
-
-.cod {
-    background-color: purple;
-}
 
 .emoneyContainer {
     background-color: green;

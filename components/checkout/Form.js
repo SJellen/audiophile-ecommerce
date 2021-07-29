@@ -48,10 +48,14 @@ export default function Form() {
                     <h4>PAYMENT DETAILS</h4>
                     <h5>Payment Method</h5>
                         <div className={styles.paymentSelect}>
-                            <input onChange={handleChange} type="radio" className={styles.emoney} id="isEmoney" value="emoney" name="paymentChoice" />
+                            <div className={styles.methodContainer}>
+                                <input onChange={handleChange} type="radio" className={styles.emoney} id="isEmoney" value="emoney" name="paymentChoice" />
                                 <label htmlFor="paymentChoice1" >e-Money</label>
-                            <input onChange={handleChange} type="radio" className={styles.cod} id="cod" value="cod" name="paymentChoice" />
+                            </div>
+                            <div className={styles.methodContainer}>
+                                <input onChange={handleChange} type="radio" className={styles.cod} id="cod" value="cod" name="paymentChoice" />
                                 <label htmlFor="paymentChoice2">Cash on Delivery</label>
+                            </div> 
                         </div>
                         <div className={styles.emoneyContainer} style={{display: checkoutForm.paymentChoice === "emoney" ? "block": "none"}}>
                             <label htmlFor="emoney" className="emoney">e-Money Number<span id="emoneyLabel">Must Be 9 Digits</span></label>

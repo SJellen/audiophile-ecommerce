@@ -17,7 +17,7 @@
 
 .itemContainer {
     width: 80%;
-    height: 64px;
+    height: auto;
     margin: 1.5rem auto;
     display: flex;
     justify-content: space-between;
@@ -26,14 +26,14 @@
 
 .leftContainer {
     width: 200px;
-    height: 64px;
+    height: auto;
     display: flex;
     flex-direction: row;
     .textContainer {
         display: flex;
         flex-direction: column;
         width: auto;
-        height: 64px;
+        height: auto;
         justify-content: center;
         align-items: flex-start;
         h4 {

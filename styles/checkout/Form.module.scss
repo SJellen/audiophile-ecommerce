@@ -112,7 +112,6 @@
 }
 
 .paymentFlexContainer {
-    border: 1px solid gold;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -187,5 +186,15 @@
 }
 
 .codContainer {
-    background-color: yellow;
+    border: 1px solid yellow;
+    margin: 1rem auto;
+    display: flex;
+    p {
+        color: V.$slate;
+        font-size: .9rem;
+        font-weight: 100;
+        border: 1px solid red;
+        line-height: 1.5;
+        width: 85%;
+    }
 }

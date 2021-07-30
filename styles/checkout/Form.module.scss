@@ -5,7 +5,6 @@
     height: 105%;
     background-color: V.$white;
     border-radius: 10px;
-
     form {
         width: 85%;
         margin: 0 auto;
@@ -59,9 +58,7 @@
     }
     input::placeholder {
         padding-left: 1rem
-    }
-
-    
+    } 
 }
 
 
@@ -177,16 +174,54 @@
 
 
 .emoneyContainer {
-    background-color: green;
+    margin: 2rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .emoneyNumberContainer {
+    width: 49%;
     input:hover {
         border: 1px solid V.$orange;
         cursor: pointer;
         caret-color: V.$orange;
     }
+    label {
+        color: V.$black;
+        font-size: .75rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+        font-weight: 700;
+        span {
+            display: none;
+            font-weight: 400;
+        }
+    }
+    input {
+        width: 100%;
+        height: 55px;
+        border-radius: 5px;
+        border: 1px solid V.$slate;
+    }
+
+    input:hover {
+        border: 1px solid V.$orange;
+        cursor: pointer;
+        caret-color: V.$orange;
+    }
+    input::placeholder {
+        padding-left: 1rem
+    } 
+}  
 }
 
+
+
+
+
+
 .codContainer {
-    border: 1px solid yellow;
+    border: 1px solid green;
     margin: 1rem auto;
     display: flex;
     p {

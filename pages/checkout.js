@@ -1,6 +1,7 @@
 import styles from '../styles/checkout/Checkout.module.scss'
 import Form from '../components/checkout/Form'
 import Summary from '../components/checkout/Summary'
+import OrderComplete from '../components/OrderComplete'
 
 export default function Checkout() {
 
@@ -11,6 +12,7 @@ export default function Checkout() {
                 <div className={styles.flexContainer}>
                     <Form />
                     <Summary />
+                    <OrderComplete /> 
                 </div>
         </div>
     )

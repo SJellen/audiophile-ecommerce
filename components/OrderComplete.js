@@ -5,10 +5,10 @@ import { Context} from '../context/Context'
 
 export default function OrderComplete() {
 
-    const {isCartOpen} = useContext(Context)
+    const {isOrderComplete} = useContext(Context)
 
     return (
-        <div>
+        <div style={{display: isOrderComplete ? '' : 'none'}} className={styles.container}>
             order complete
         </div>
     )

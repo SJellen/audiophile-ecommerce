@@ -58,10 +58,14 @@ export default function Form() {
                             </div> 
                         </div>
                         <div className={styles.emoneyContainer} style={{display: checkoutForm.paymentChoice === "emoney" ? "block": "none"}}>
-                            <label htmlFor="emoney" className="emoney">e-Money Number<span id="emoneyLabel">Must Be 9 Digits</span></label>
+                            <div className={styles.emoneyNumberContainer}>
+                                <label htmlFor="emoney" className="emoney">e-Money Number<span id="emoneyLabel">Must Be 9 Digits</span></label>
                                 <input onChange={handleChange} value={checkoutForm.emoney} type="text" id="emoney" name="emoney" placeholder="238521993" />
-                            <label htmlFor="pin" className="pin">e-Money PIN<span id="pinLabel">Must Be 4 Digits</span></label>
-                                <input onChange={handleChange} value={checkoutForm.pin} type="text" id="pin" name="pin"  placeholder="6891" />    
+                            </div>
+                            <div className={styles.emoneyNumberContainer}>
+                                <label htmlFor="pin" className="pin">e-Money PIN<span id="pinLabel">Must Be 4 Digits</span></label>
+                                <input onChange={handleChange} value={checkoutForm.pin} type="text" id="pin" name="pin"  placeholder="6891" /> 
+                            </div>    
                         </div>
                         <div className={styles.codContainer} style={{display: checkoutForm.paymentChoice === "cod" ? "block": "none"}}>
                         <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>

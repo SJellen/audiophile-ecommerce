@@ -1,5 +1,6 @@
 import styles from '../../styles/checkout/Form.module.scss'
 import useCheckoutLogic from '../../logic/useCheckoutLogic'
+import Image from 'next/image'
 
 export default function Form() {
 
@@ -68,6 +69,9 @@ export default function Form() {
                             </div>    
                         </div>
                         <div className={styles.codContainer} style={{display: checkoutForm.paymentChoice === "cod" ? "flex": "none"}}>
+                        <div className={styles.iconContainer}>
+                            <Image src="/assets/shared/desktop/cod.svg" alt="cod icon" width="48" height="48"  className={styles.svg}/>
+                        </div>
                         <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
                         </div>
                 </div>

@@ -216,20 +216,21 @@
 }
 
 
-
-
-
-
 .codContainer {
-    border: 1px solid green;
     margin: 1rem auto;
     display: flex;
+    justify-content: space-between;
+    .iconContainer {
+        display: flex;
+        .svg {
+            filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
+        }
+    }
     p {
         color: V.$slate;
         font-size: .9rem;
         font-weight: 100;
-        border: 1px solid red;
-        line-height: 1.5;
+        line-height: 1.75;
         width: 85%;
     }
 }

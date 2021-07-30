@@ -6,7 +6,6 @@ export default function Form() {
 
     const {checkoutForm, handleChange, handleSubmit} = useCheckoutLogic()
 
-    console.log(checkoutForm)
     return (
         <div className={styles.container}>
             <h1 className={styles.h1}>CHECKOUT</h1>

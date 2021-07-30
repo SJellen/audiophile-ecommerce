@@ -5,6 +5,7 @@ import useCartLogic from "./useCartLogic";
 export default function useCheckoutLogic() {
 
     const {filteredCart, totalPrice} = useCartLogic()
+    const {isOrderComplete, setIsOrderComplete} = useContext(Context)
 
     const initialForm = {
         name: '',
@@ -68,10 +69,12 @@ export default function useCheckoutLogic() {
         if (checkoutForm.paymentChoice === "cod") {
             if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && validateZipCode(checkoutForm.zip) === true && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0) {
             setCheckoutForm(initialForm)
+            setIsOrderComplete(true)
         }}
         if (checkoutForm.paymentChoice === "emoney") {
             if (checkoutForm.name.length !== 0 && validateEmail(checkoutForm.email) === true && ((checkoutForm.phone.match(/\d/g)?.length === 11) === true || checkoutForm.phone.length !== null) && checkoutForm.address.length !== 0 && validateZipCode(checkoutForm.zip) === true && checkoutForm.city.length !== 0 && checkoutForm.country.length !== 0 && validateEmoney(checkoutForm.emoney) === true && validatePIN(checkoutForm.pin) === true) {
                 setCheckoutForm(initialForm)  
+                setIsOrderComplete(true)
             }
         }
         

@@ -1,0 +1,16 @@
+
+@use 'variables' as V; 
+
+.container {
+    background-color: V.$white;
+    border: 1px solid red;
+    display: block;
+    width: 377px;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+    right: 11%;
+    top: 7.5rem;
+    padding-bottom: 2rem;
+}

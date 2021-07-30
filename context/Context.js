@@ -53,7 +53,6 @@ function ContextProvider({ children }) {
     }, [currentProduct])
 
     const initialCart = items
-
     const [cart, setCart] = useLocalStorageState('cart', initialCart)
 
 
@@ -75,14 +74,16 @@ function ContextProvider({ children }) {
 
     }, [])
 
-    
+    const [isOrderComplete, setIsOrderComplete] = useState(false)
 
+    
+    console.log(isOrderComplete)
     
     
 
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete}}>
             {children}
         </Context.Provider>
     )

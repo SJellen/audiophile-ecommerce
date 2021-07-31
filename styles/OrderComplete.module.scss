@@ -13,6 +13,13 @@
     right: 30%;
     top: 10rem;
     padding-bottom: 3rem;
+    .svg {
+        filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
+    }
+    h1 {
+        width: 280px;
+        border: 1px solid red;
+    }
 }
 
 .topContainer {

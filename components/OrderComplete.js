@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import styles from '../styles/OrderComplete.module.scss'
 import { Context} from '../context/Context'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function OrderComplete() {
 
@@ -10,6 +11,9 @@ export default function OrderComplete() {
     return (
         <div style={{display: isOrderComplete ? '' : 'none'}} className={styles.container}>
             <div className={styles.topContainer}>
+                <Image src="/assets/shared/desktop/check-mark.svg" alt="check mark icon" width="64" height="64"  className={styles.svg}/>
+                <h1>THANK YOU FOR YOUR ORDER</h1>
+                <p>You will receive an email confirmation shortly.</p>
 
             </div>
             <div className={styles.topContainer}>

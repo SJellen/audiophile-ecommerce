@@ -16,11 +16,6 @@
     .svg {
         filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
     }
-    h1 {
-        width: 280px;
-        border: 1px solid red;
-        letter-spacing: 1px;
-    }
     p {
         color: V.$gray;
         font-size: .9rem;
@@ -33,7 +28,6 @@
     width: 90%;
     height: 250px;
     margin: 3rem auto 0 auto;
-
 }
 
 .middleContainer {
@@ -58,8 +52,24 @@
     height: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .totalContainer {
+        width: 70%;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        p {
+            color: V.$slate;
+            font-weight: 500;
+            margin-bottom: -.5rem;
+            font-size: 1rem;
+        }
+        h3 {
+            color: white;
+        }
+    }
 }
-
 
 .buttonBox {
     width: 90%;

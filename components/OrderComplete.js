@@ -16,7 +16,13 @@ export default function OrderComplete() {
                 <p>You will receive an email confirmation shortly.</p>
 
             </div>
-            <div className={styles.topContainer}>
+            <div className={styles.middleContainer}>
+                <div className={styles.leftContainer}>
+                    
+                </div>
+                <div className={styles.rightContainer}>
+
+                </div>
 
             </div>
             <div className={styles.buttonBox}>

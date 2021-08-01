@@ -128,5 +128,7 @@ export default function useCheckoutLogic() {
  
     }
 
+    
+
     return {filteredCart, totalPrice, checkoutForm, setCheckoutForm, handleChange, handleSubmit}
 }

@@ -43,9 +43,9 @@ export default function Cart() {
                 <h3 className={styles.totalPrice}>$ {totalPrice().toLocaleString("en-US")}</h3>
             </div>
             <div className={styles.buttonBox}>
-                <Link href="/checkout" >
+                
                     <a onClick={() => handleHandleCartCheckoutClick()}>CHECKOUT</a>
-                </Link>
+              
             </div>
         </div>
     )

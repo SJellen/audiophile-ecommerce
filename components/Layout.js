@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BestGear from './BestGear'
 import Cart from './Cart'
+import Checkout from './checkout/Checkout'
 
 
 export default function Layout({children}) {
@@ -20,7 +21,7 @@ export default function Layout({children}) {
             <main >
               {children}
             </main>
-            
+            <Checkout />
             <BestGear />
             <Footer />
         </div>

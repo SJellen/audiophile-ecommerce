@@ -37,7 +37,7 @@ export default function Cart() {
             <div className={styles.topCartContainer}>
                 <h2>Cart ({filteredCart.length})</h2> <h3 onClick={() => handleRemoveAllClick()}>Remove all</h3>
             </div>
-            {productMapping}
+                <div>{productMapping}</div>
             <div className={styles.bottomTextContainer}>
                 <h3 className={styles.total}>Total</h3>
                 <h3 className={styles.totalPrice}>$ {totalPrice().toLocaleString("en-US")}</h3>

@@ -31,7 +31,7 @@ export default function Summary() {
     return (
         <div className={styles.container}>
             <div className={styles.topContainer}><h3>SUMMARY</h3></div>
-            {productMapping}
+                <div>{productMapping}</div>
             <div className={styles.bottomContainer}>
                 <h3>TOTAL <span>$ {(totalPrice()).toLocaleString("en-US")}</span></h3>
                 <h3>SHIPPING <span>$ 50</span></h3>

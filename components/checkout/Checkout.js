@@ -7,10 +7,10 @@ import { Context } from '../../context/Context'
 
 export default function Checkout() {
 
-    const {isCheckout} = useContext(Context)
+    const {isCheckout, dimmerStyle} = useContext(Context)
 
     return (
-        <div className={styles.container} style={{display: isCheckout ? '' : 'none' }}>
+        <div className={styles.container} style={{display: isCheckout ? '' : 'none'}}>
             <div className={styles.header}></div>
                 <div className={styles.goBack}><h4>Go Back</h4></div>
                 <div className={styles.flexContainer}>

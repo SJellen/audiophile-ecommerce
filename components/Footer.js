@@ -1,10 +1,12 @@
+import React, {useContext} from 'react'
 import styles from '../styles/Footer.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Context} from '../context/Context'
 
 export default function Footer() {
     /* eslint-disable react/no-unescaped-entities */
-    
+    const {orderCompleteOutSideLinkClick} = useContext(Context)
 
     return (
         <footer className={styles.footer}>
@@ -15,10 +17,10 @@ export default function Footer() {
                     <Image src="/assets/shared/desktop/logo.svg" alt="audiophile logo" width="143" height="25"/>
                 </div>
                 <nav className={styles.nav}>   
-                    <Link href="/"><a>HOME</a></Link>
-                    <Link href="/headphones"><a>HEADPHONES</a></Link>  
-                    <Link href="/speakers"><a>SPEAKERS</a></Link>  
-                    <Link href="/earphones"><a>EARPHONES</a></Link>  
+                    <Link href="/"><a onClick={() => orderCompleteOutSideLinkClick()}>HOME</a></Link>
+                    <Link href="/headphones"><a onClick={() => orderCompleteOutSideLinkClick()}>HEADPHONES</a></Link>  
+                    <Link href="/speakers"><a onClick={() => orderCompleteOutSideLinkClick()}>SPEAKERS</a></Link>  
+                    <Link href="/earphones"><a onClick={() => orderCompleteOutSideLinkClick()}>EARPHONES</a></Link>  
                 </nav>
             </div>
             <div className={styles.description}>

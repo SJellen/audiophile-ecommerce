@@ -67,12 +67,13 @@ function ContextProvider({ children }) {
         setProductPageQuantity(1)
     }
 
-    useEffect(() => {
-        const pathname = window.location.pathname
-        if (pathname === "/checkout")
-        setIsCheckout(true)
+    function orderCompleteOutSideLinkClick() {
+        setCart(initialCart)
+        setIsOrderComplete(false)
+        setIsCheckout(false)
+    }
 
-    }, [])
+    
 
     const [isOrderComplete, setIsOrderComplete] = useState(false)
 
@@ -83,7 +84,7 @@ function ContextProvider({ children }) {
 
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick}}>
             {children}
         </Context.Provider>
     )

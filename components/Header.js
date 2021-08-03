@@ -6,7 +6,7 @@ import { Context} from '../context/Context'
 
 export default function Header() {
     
-    const {handleCartIconClick, isCheckout} = useContext(Context)
+    const {handleCartIconClick, isCheckout, orderCompleteOutSideLinkClick} = useContext(Context)
 
     return (
         <div className={styles.container} style={{backgroundColor: isCheckout ? 'black' : '', width: isCheckout ? '100%' : '', padding: isCheckout ? '0 11%' : ''}}>
@@ -19,10 +19,10 @@ export default function Header() {
                 </div>
             </div>
             <nav className={styles.nav}> 
-                <Link href="/"><a>HOME</a></Link>
-                <Link href="/headphones"><a>HEADPHONES</a></Link>  
-                <Link href="/speakers"><a>SPEAKERS</a></Link>  
-                <Link href="/earphones"><a>EARPHONES</a></Link>      
+                <Link href="/" ><a onClick={() => orderCompleteOutSideLinkClick()}>HOME</a></Link>
+                <Link href="/headphones" ><a onClick={() => orderCompleteOutSideLinkClick()}>HEADPHONES</a></Link>  
+                <Link href="/speakers" ><a onClick={() => orderCompleteOutSideLinkClick()}>SPEAKERS</a></Link>  
+                <Link href="/earphones" ><a onClick={() => orderCompleteOutSideLinkClick()}>EARPHONES</a></Link>      
             </nav>
             <div className={styles.rightFlexContainer}>
                 <div className={styles.cartLogo}>

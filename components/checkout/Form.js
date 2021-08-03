@@ -1,13 +1,16 @@
+import React, {useContext} from 'react'
 import styles from '../../styles/checkout/Form.module.scss'
 import useCheckoutLogic from '../../logic/useCheckoutLogic'
 import Image from 'next/image'
+import { Context } from '../../context/Context'
 
 export default function Form() {
 
     const {checkoutForm, handleChange, handleSubmit} = useCheckoutLogic()
+    const {isCheckout, dimmerStyle, isOrderComplete} = useContext(Context)
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={{display: isCheckout ? '' : 'none', filter: isOrderComplete ? "brightness(.25)" : "", backgroundColor: isOrderComplete ? "gray" : ''}}>
             <h1 className={styles.h1}>CHECKOUT</h1>
             <form id="checkout" onSubmit={handleSubmit} >
                 <div className={styles.billingFlexContainer}>

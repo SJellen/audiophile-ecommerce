@@ -9,7 +9,7 @@ import Midsection from '../components/home/Midsection'
 
 export default function Home() {
 
-  const {isCheckout} = useContext(Context)
+  const {isCheckout, isCartOpen} = useContext(Context)
 
   return (
     <div className={styles.container} style={{display: isCheckout ? 'none' : ''}}>

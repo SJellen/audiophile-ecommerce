@@ -43,8 +43,10 @@ export default function Cart() {
                 <h3 className={styles.totalPrice}>$ {totalPrice().toLocaleString("en-US")}</h3>
             </div>
             <div className={styles.buttonBox} >
-                <a onClick={() => handleHandleCartCheckoutClick()} style={{display: filteredCart.length === 0 ? 'none' : ''}} >CHECKOUT</a>
-                <a  style={{display: filteredCart.length === 0 ? '' : 'none'}} >CART EMPTY</a>
+                <a onClick={() => handleHandleCartCheckoutClick()} 
+                // style={{display: filteredCart.length === 0 ? 'none' : ''}}
+                 >CHECKOUT</a>
+                {/* <a  style={{display: filteredCart.length === 0 ? '' : 'none'}} >CART EMPTY</a> */}
             </div>
         </div>
     )

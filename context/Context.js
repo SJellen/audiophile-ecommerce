@@ -73,19 +73,21 @@ function ContextProvider({ children }) {
         setIsCheckout(false)
     }
 
-    
-
     const [isOrderComplete, setIsOrderComplete] = useState(false)
     const dimmerStyle = {filter: isCartOpen === true ? "brightness(.50)" : ""}
 
-    console.log(isCartOpen)
+    function handleContinueAndPay() {
+        setIsOrderComplete(true)
+    }
+
+   
     
     
     
 
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, dimmerStyle}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, dimmerStyle, isOrderComplete, handleContinueAndPay}}>
             {children}
         </Context.Provider>
     )

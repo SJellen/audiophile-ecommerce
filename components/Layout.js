@@ -1,15 +1,19 @@
+import React, {useContext} from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BestGear from './BestGear'
 import Cart from './Cart'
 import Checkout from './checkout/Checkout'
+import { Context } from '../context/Context'
 
 
 export default function Layout({children}) {
+
+  const {isCheckout, isCartOpen} = useContext(Context)
   
       return (
-        <div className="container" style={{minWidth: '100%', padding: "0", overflow: "hidden"}} >
+        <div className="container" style={{minWidth: '100%', padding: "0", overflow: "hidden", backgroundColor: isCheckout || isCartOpen ? "black" : ''}} >
           <Head>
             <title>Audiophile</title>
             <link rel="icon" href="/favicon.ico" />
@@ -18,7 +22,7 @@ export default function Layout({children}) {
           </Head>
             <Header/>
             <Cart />
-            <main >
+            <main style={{filter: isCheckout || isCartOpen ? "brightness(.25)" : " ", backgroundColor: isCheckout || isCartOpen ? "gray" : ''}}>
               {children}
             </main>
             <Checkout />

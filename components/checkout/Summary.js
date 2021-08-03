@@ -1,10 +1,13 @@
+import React, {useContext} from 'react'
 import styles from '../../styles/checkout/Summary.module.scss'
 import useCheckoutLogic from '../../logic/useCheckoutLogic'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Context } from '../../context/Context'
 
 export default function Summary() {
 
+    const {handleContinueAndPay, isOrderComplete, isCheckout} = useContext(Context)
     const {filteredCart, totalPrice} = useCheckoutLogic()
     const vat = ((totalPrice() / 100) * 20).toLocaleString("en-US", {
         minimumFractionDigits: 0,
@@ -29,7 +32,7 @@ export default function Summary() {
     ))
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={{display: isCheckout ? '' : 'none', filter: isOrderComplete ? "brightness(.25)" : "", backgroundColor: isOrderComplete ? "gray" : ''}}>
             <div className={styles.topContainer}><h3>SUMMARY</h3></div>
                 <div>{productMapping}</div>
             <div className={styles.bottomContainer}>
@@ -39,7 +42,7 @@ export default function Summary() {
                 <h3>GRAND TOTAL <span className={styles.grandTotal}>$ {(totalPrice() + 50).toLocaleString("en-US")}</span></h3>
             </div>
             <div className={styles.buttonBox}>
-                <button form="checkout" type="submit">CONTINUE & PAY</button>
+                <button form="checkout" type="submit" onClick={() => handleContinueAndPay()}>CONTINUE & PAY</button>
             </div>
         </div>
     )

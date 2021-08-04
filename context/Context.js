@@ -79,10 +79,12 @@ function ContextProvider({ children }) {
     function orderCompleteOutSideLinkClick() {
         if (isCheckout) {
           setCart(initialCart)
-        setIsOrderComplete(false)
-        setIsCheckout(false)  
+          setIsOrderComplete(false)
+          setIsCheckout(false)  
         }
-        
+        if (isCartOpen) {
+            setIsCartOpen(false)
+        }
     }
 
     const [isOrderComplete, setIsOrderComplete] = useState(false)

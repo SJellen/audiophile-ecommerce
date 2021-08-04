@@ -44,9 +44,9 @@ export default function Cart() {
             </div>
             <div className={styles.buttonBox} >
                 <a onClick={() => handleCartCheckoutClick()} 
-                // style={{display: filteredCart.length === 0 ? 'none' : ''}}
+                style={{display: filteredCart.length === 0 ? 'none' : ''}}
                  >CHECKOUT</a>
-                {/* <a  style={{display: filteredCart.length === 0 ? '' : 'none'}} >CART EMPTY</a> */}
+                <a  style={{display: filteredCart.length === 0 ? '' : 'none'}} >CART EMPTY</a>
             </div>
         </div>
     )

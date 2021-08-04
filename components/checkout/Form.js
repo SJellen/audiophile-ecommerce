@@ -10,7 +10,7 @@ export default function Form() {
     const {isCheckout, dimmerStyle, isOrderComplete} = useContext(Context)
 
     return (
-        <div className={styles.container} style={{display: isCheckout ? '' : 'none', filter: isOrderComplete ? "brightness(.25)" : "", backgroundColor: isOrderComplete ? "gray" : ''}}>
+        <div className={styles.container} style={{display: isCheckout ? '' : 'none', filter: isOrderComplete ? "brightness(.55)" : ""}}>
             <h1 className={styles.h1}>CHECKOUT</h1>
             <form id="checkout" onSubmit={handleSubmit} >
                 <div className={styles.billingFlexContainer}>

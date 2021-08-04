@@ -32,7 +32,7 @@ export default function Summary() {
     ))
 
     return (
-        <div className={styles.container} style={{display: isCheckout ? '' : 'none', filter: isOrderComplete ? "brightness(.25)" : "", backgroundColor: isOrderComplete ? "gray" : ''}}>
+        <div className={styles.container} style={{display: isCheckout ? '' : 'none', filter: isOrderComplete ? "brightness(.55)" : ""}}>
             <div className={styles.topContainer}><h3>SUMMARY</h3></div>
                 <div>{productMapping}</div>
             <div className={styles.bottomContainer}>

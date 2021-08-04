@@ -13,7 +13,7 @@ export default function Layout({children}) {
   const {isCheckout, isCartOpen} = useContext(Context)
   
       return (
-        <div className="container" style={{minWidth: '100%', padding: "0", overflow: "hidden", backgroundColor: isCheckout || isCartOpen ? "black" : ''}} >
+        <div className="container" style={{minWidth: '100%', padding: "0", overflow: "hidden", backgroundColor: isCheckout || isCartOpen ? "gray" : ''}} >
           <Head>
             <title>Audiophile</title>
             <link rel="icon" href="/favicon.ico" />
@@ -22,7 +22,7 @@ export default function Layout({children}) {
           </Head>
             <Header/>
             <Cart />
-            <main style={{filter: isCheckout || isCartOpen ? "brightness(.25)" : " ", backgroundColor: isCheckout || isCartOpen ? "gray" : ''}}>
+            <main style={{filter: isCheckout || isCartOpen ? "brightness(.55)" : " ", backgroundColor: isCheckout || isCartOpen ? "silver" : ''}}>
               {children}
             </main>
             <Checkout />

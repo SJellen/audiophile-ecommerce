@@ -4,11 +4,13 @@ import { Context} from '../context/Context'
 import Link from 'next/link'
 import Image from 'next/image'
 import useCheckoutLogic from '../logic/useCheckoutLogic'
+import useCartLogic from '../logic/useCartLogic'
 
 export default function OrderComplete() {
 
     const {isOrderComplete} = useContext(Context)
     const {filteredCart, totalPrice} = useCheckoutLogic()
+    const {handleOrderCompleteGoHomeClick} = useCartLogic()
 
     return (
         <div style={{display: isOrderComplete ? '' : 'none'}} className={styles.container}>
@@ -31,7 +33,7 @@ export default function OrderComplete() {
             </div>
             <div className={styles.buttonBox}>
                 <Link href="/" >
-                    <a onClick={() => handleHandleCartCheckoutClick()}>BACK TO HOME</a>
+                    <a onClick={() => handleOrderCompleteGoHomeClick()}>BACK TO HOME</a>
                 </Link>
             </div>
         </div>

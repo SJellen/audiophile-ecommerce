@@ -4,11 +4,11 @@ import { Context } from "../context/Context";
 
 export default function useCartLogic() {
 
-    const {cart, setCart, isCheckout, setIsCheckout, isCartOpen, setIsCartOpen} = useContext(Context)
-
-    const filteredCart = cart.filter(x => x.quantity !== 0)
-
+    const {cart, setCart, isCheckout, setIsCheckout, isCartOpen, setIsCartOpen, filteredCart} = useContext(Context)
+    
+   
     function handleRemoveAllClick() {
+        setCart()
         setCart([
     {
         "name": "YX1 Wireless Earphones",
@@ -57,7 +57,7 @@ export default function useCartLogic() {
 
     function totalPrice() {
         let total = 0
-        filteredCart.forEach(item => {
+        filteredCart?.forEach(item => {
         total += item.price * item.quantity
         })
         return total
@@ -85,15 +85,64 @@ export default function useCartLogic() {
         setCart(updateCart)
     }
 
-    function handleHandleCartCheckoutClick() {
+    function handleCartCheckoutClick() {
         setIsCheckout(true)
         setIsCartOpen(false) 
     } 
 
+    function handleOrderCompleteGoHomeClick() {
+        setIsCheckout(false)
+        setCart([
+            {
+                "name": "YX1 Wireless Earphones",
+                "displayName": "YX1",
+                "price": 599,
+                "image": "/assets/cart/image-yx1-earphones.jpg",
+                "quantity": 0
+            },
+            {
+                "name": "XX59 Headphones",
+                "displayName": "XX59",
+                "price": 899,
+                "image": "/assets/cart/image-xx59-headphones.jpg",
+                "quantity": 0
+            },
+            {
+                "name": "XX99 Mark I Headphones",
+                "displayName": "XX99 MKI",
+                "price": 1750,
+                "image": "/assets/cart/image-xx99-mark-one-headphones.jpg",
+                "quantity": 0
+            },
+            {
+                "name": "XX99 Mark II Headphones",
+                "displayName": "XX99 MKII",
+                "price": 2999,
+                "image": "/assets/cart/image-xx99-mark-two-headphones.jpg",
+                "quantity": 0
+            },
+            {
+                "name": "ZX7 Speaker",
+                "displayName": "ZX7",
+                "price": 3500,
+                "image": "/assets/cart/image-zx7-speaker.jpg",
+                "quantity": 0
+            },
+            {
+                "name": "ZX9 Speaker",
+                "displayName": "ZX9",
+                "price": 4500,
+                "image": "/assets/cart/image-zx9-speaker.jpg",
+                "quantity": 0
+            }
+        ])
+        
+    }
+
    
    
     
     
 
-    return {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement, handleHandleCartCheckoutClick}
+    return { handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement, handleCartCheckoutClick, handleOrderCompleteGoHomeClick}
 }

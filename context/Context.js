@@ -14,6 +14,8 @@ function ContextProvider({ children }) {
     const [isCartOpen, setIsCartOpen] = useState(false)
     const [isCheckout, setIsCheckout] = useState(false)
 
+    
+
     function handleSeeProductClick(itemNumber) {
         let selection = data[itemNumber]
         setCurrentProduct(selection)
@@ -55,6 +57,13 @@ function ContextProvider({ children }) {
     const initialCart = items
     const [cart, setCart] = useLocalStorageState('cart', initialCart)
 
+    const [filteredCart, setFilteredCart] = useState()
+
+    useEffect(() => {
+        let filtered = cart.filter(x => x.quantity !== 0)
+        setFilteredCart(filtered)
+    }, [cart])
+
 
     function handleAddToCartClick() {
         const productMatch = cart.find(x => x.name === currentProduct.name)
@@ -68,26 +77,34 @@ function ContextProvider({ children }) {
     }
 
     function orderCompleteOutSideLinkClick() {
-        setCart(initialCart)
+        if (isCheckout) {
+          setCart(initialCart)
         setIsOrderComplete(false)
-        setIsCheckout(false)
+        setIsCheckout(false)  
+        }
+        
     }
 
     const [isOrderComplete, setIsOrderComplete] = useState(false)
-    const dimmerStyle = {filter: isCartOpen === true ? "brightness(.50)" : ""}
 
     function handleContinueAndPay() {
         setIsOrderComplete(true)
     }
 
-   
     
+
+    
+
+   
+    useEffect(() => {
+        console.table(cart)
+    }, [cart])
     
     
 
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, dimmerStyle, isOrderComplete, handleContinueAndPay}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart}}>
             {children}
         </Context.Provider>
     )

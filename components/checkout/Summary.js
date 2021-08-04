@@ -14,7 +14,7 @@ export default function Summary() {
         maximumFractionDigits: 0
       })
 
-     const productMapping = filteredCart.map((item, index) => (
+     const productMapping = filteredCart && filteredCart.map((item, index) => (
         <div key={index} className={styles.itemContainer}>
             <div className={styles.leftContainer}>
                 <div className={styles.imgContainer}>

@@ -7,11 +7,11 @@ import Link from 'next/link'
 
 export default function Cart() {
 
-    const {isCartOpen} = useContext(Context)
-    const {filteredCart, handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement, handleHandleCartCheckoutClick} = useCartLogic()
+    const {isCartOpen, filteredCart} = useContext(Context)
+    const { handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement, handleCartCheckoutClick} = useCartLogic()
 
 
-    const productMapping = filteredCart.map((item, index) => (
+    const productMapping = filteredCart && filteredCart.map((item, index) => (
         <div key={index} className={styles.itemContainer}>
             <div className={styles.leftContainer}>
                 <div className={styles.imgContainer}>
@@ -35,7 +35,7 @@ export default function Cart() {
     return (
         <div className={styles.container} style={{display: isCartOpen ? "" : "none"}}>
             <div className={styles.topCartContainer}>
-                <h2>Cart ({filteredCart.length})</h2> <h3 onClick={() => handleRemoveAllClick()}>Remove all</h3>
+                <h2>Cart ({filteredCart?.length})</h2> <h3 onClick={() => handleRemoveAllClick()}>Remove all</h3>
             </div>
                 <div>{productMapping}</div>
             <div className={styles.bottomTextContainer}>
@@ -43,7 +43,7 @@ export default function Cart() {
                 <h3 className={styles.totalPrice}>$ {totalPrice().toLocaleString("en-US")}</h3>
             </div>
             <div className={styles.buttonBox} >
-                <a onClick={() => handleHandleCartCheckoutClick()} 
+                <a onClick={() => handleCartCheckoutClick()} 
                 // style={{display: filteredCart.length === 0 ? 'none' : ''}}
                  >CHECKOUT</a>
                 {/* <a  style={{display: filteredCart.length === 0 ? '' : 'none'}} >CART EMPTY</a> */}

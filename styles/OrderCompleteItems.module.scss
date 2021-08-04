@@ -1,0 +1,64 @@
+@use 'variables' as V;
+
+.itemContainer {
+    width: 80%;
+    height: auto;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.leftContainer {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-items: flex-start;
+        h4 {
+            margin: 0rem auto;
+            width: 100%;
+            margin-left: 1rem
+        }
+        .name {
+            color: V.$black;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: .9rem;
+        }
+        .price {
+            color: V.$slate;
+            font-weight: 500;
+            font-size: .8rem;
+        }
+    }
+}
+
+.imgContainer {
+    width: 64px;
+    height: auto;
+    .img {
+        border-radius: 5px;
+    }
+}
+
+.rightContainer {
+    width: 10%;
+    .quantityBox {
+        color: V.$slate;
+        font-weight: 600;
+        width: auto;
+        height: 32px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: .9rem;
+    }
+}

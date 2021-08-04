@@ -5,12 +5,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import useCheckoutLogic from '../logic/useCheckoutLogic'
 import useCartLogic from '../logic/useCartLogic'
+import OrderCompleteItems from './OderCompleteItems'
 
 export default function OrderComplete() {
 
     const {isOrderComplete} = useContext(Context)
     const {filteredCart, totalPrice} = useCheckoutLogic()
     const {handleOrderCompleteGoHomeClick} = useCartLogic()
+
+    
 
     return (
         <div style={{display: isOrderComplete ? '' : 'none'}} className={styles.container}>
@@ -21,7 +24,7 @@ export default function OrderComplete() {
             </div>
             <div className={styles.middleContainer}>
                 <div className={styles.leftContainer}>
-                    
+                    <OrderCompleteItems />
                 </div>
                 <div className={styles.rightContainer}>
                     <div className={styles.totalContainer}>

@@ -31,7 +31,7 @@
 
 .middleContainer {
     width: 82.5%;
-    height: 250px;
+    height: auto;
     margin: 1rem auto 3rem auto;
     display: flex;
     flex-direction: row;
@@ -48,7 +48,7 @@
 .rightContainer {
     background-color: V.$black;
     width: 45%;
-    height: 100%;
+    height: auto;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;

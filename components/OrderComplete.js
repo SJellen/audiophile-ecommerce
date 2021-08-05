@@ -6,6 +6,7 @@ import Image from 'next/image'
 import useCheckoutLogic from '../logic/useCheckoutLogic'
 import useCartLogic from '../logic/useCartLogic'
 import OrderCompleteItems from './OderCompleteItems'
+import OrderCompleteSingleItems from './OrderCompleteSingleItem'
 
 export default function OrderComplete() {
 
@@ -23,6 +24,7 @@ export default function OrderComplete() {
             <div className={styles.middleContainer}>
                 <div className={styles.leftContainer}>
                     <OrderCompleteItems />
+                    <OrderCompleteSingleItems />
                     <div className={styles.toggleContainer}>
                         <h4>View less</h4>
                     </div>

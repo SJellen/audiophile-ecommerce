@@ -13,8 +13,6 @@ export default function OrderComplete() {
     const {filteredCart, totalPrice} = useCheckoutLogic()
     const {handleOrderCompleteGoHomeClick} = useCartLogic()
 
-    
-
     return (
         <div style={{display: isOrderComplete ? '' : 'none'}} className={styles.container}>
             <div className={styles.topContainer}>
@@ -25,12 +23,14 @@ export default function OrderComplete() {
             <div className={styles.middleContainer}>
                 <div className={styles.leftContainer}>
                     <OrderCompleteItems />
+                    <div className={styles.toggleContainer}>
+                        <h4>View less</h4>
+                    </div>
                 </div>
                 <div className={styles.rightContainer}>
                     <div className={styles.totalContainer}>
                         <p>GRAND TOTAL</p>
                         <h3>$ {(totalPrice() + 50).toLocaleString("en-US")}</h3>
-
                     </div>
                 </div>
             </div>

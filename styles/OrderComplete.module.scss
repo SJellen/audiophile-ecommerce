@@ -3,7 +3,6 @@
 
 .container {
     background-color: V.$white;
-    border: 1px solid red;
     display: block;
     width: 540px;
     height: auto;
@@ -43,7 +42,23 @@
     height: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    .toggleContainer {
+        border-top: 1px solid rgba(226,226,226, 1);
+        width: 80%;
+        margin: 0 auto;
+        h4 {
+            color: V.$slate;
+            text-align: center;
+            font-size: .8rem;
+            font-weight: 500;
+        }
+        h4:hover {
+            cursor: pointer;
+        }
+    }
 }
+
+
 
 .rightContainer {
     background-color: V.$black;

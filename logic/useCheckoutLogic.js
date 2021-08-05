@@ -128,7 +128,19 @@ export default function useCheckoutLogic() {
  
     }
 
+    const [showFullList, setShowFullList] = useState(true)
+
+    function handleOrderCompleteToggle() {
+        if (showFullList) {
+            setShowFullList(false) 
+            
+        } else {
+            setShowFullList(true)
+        }
+        
+    }
+
     
 
-    return {filteredCart, totalPrice, checkoutForm, setCheckoutForm, handleChange, handleSubmit}
+    return {filteredCart, totalPrice, checkoutForm, setCheckoutForm, handleChange, handleSubmit, handleOrderCompleteToggle, showFullList}
 }

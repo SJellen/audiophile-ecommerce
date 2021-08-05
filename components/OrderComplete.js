@@ -10,9 +10,11 @@ import OrderCompleteSingleItems from './OrderCompleteSingleItem'
 
 export default function OrderComplete() {
 
-    const {isOrderComplete} = useContext(Context)
-    const {filteredCart, totalPrice} = useCheckoutLogic()
+    const {isOrderComplete, filteredCart} = useContext(Context)
+    const {totalPrice, handleOrderCompleteToggle, showFullList} = useCheckoutLogic()
     const {handleOrderCompleteGoHomeClick} = useCartLogic()
+
+    console.log(showFullList)
 
     return (
         <div style={{display: isOrderComplete ? '' : 'none'}} className={styles.container}>
@@ -23,10 +25,15 @@ export default function OrderComplete() {
             </div>
             <div className={styles.middleContainer}>
                 <div className={styles.leftContainer}>
-                    <OrderCompleteItems />
-                    <OrderCompleteSingleItems />
-                    <div className={styles.toggleContainer}>
-                        <h4>View less</h4>
+                    <div style={{display: showFullList ? '' : 'none'}}>
+                        <OrderCompleteItems />
+                    </div>
+                    <div style={{display: showFullList ? 'none' : ''}}>
+                        <OrderCompleteSingleItems />
+                    </div> 
+                    <div className={styles.toggleContainer} style={{display: filteredCart && filteredCart?.length - 1 === 0 ? 'none' : ''}}>
+                        <h4 onClick={() => handleOrderCompleteToggle()} style={{display: showFullList ? '' : 'none'}}>View less</h4>
+                        <h4 onClick={() => handleOrderCompleteToggle()} style={{display: showFullList ? 'none' : ''}}>and {filteredCart && filteredCart?.length - 1} other item(s)</h4>
                     </div>
                 </div>
                 <div className={styles.rightContainer}>

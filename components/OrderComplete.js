@@ -14,8 +14,6 @@ export default function OrderComplete() {
     const {totalPrice, handleOrderCompleteToggle, showFullList} = useCheckoutLogic()
     const {handleOrderCompleteGoHomeClick} = useCartLogic()
 
-    console.log(showFullList)
-
     return (
         <div style={{display: isOrderComplete ? '' : 'none'}} className={styles.container}>
             <div className={styles.topContainer}>

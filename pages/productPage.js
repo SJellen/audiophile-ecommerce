@@ -10,12 +10,12 @@ import YouMayLike from '../components/productPage/YouMayLike'
 
 export default function ProductPage() {
 
-    const {currentProduct, isCheckout} = useContext(Context)
+    const {currentProduct, isCheckout, handleBackClick} = useContext(Context)
 
     return (
         <div className={styles.container} style={{display: isCheckout ? 'none' : ''}}>
             <div className={styles.header}></div>
-            <div className={styles.goBack}><h4>Go Back</h4></div>
+            <div className={styles.goBack}><h4 onClick={handleBackClick}>Go Back</h4></div>
             <ProductHero />
             <Features />
             <ProductImages />

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import data from '../data/data.json'
 import items from '../data/cart.json'
 import useLocalStorageState from 'use-local-storage-state'
+import Router from 'next/router'
 
 const Context = React.createContext() 
 
@@ -13,11 +14,13 @@ function ContextProvider({ children }) {
     const [featureLineTwo, setFeatureLineTwo] = useState()
     const [isCartOpen, setIsCartOpen] = useState(false)
     const [isCheckout, setIsCheckout] = useState(false)
+    const [backUrl, setBackUrl] = useState()
 
     
 
     function handleSeeProductClick(itemNumber) {
         let selection = data[itemNumber]
+        setBackUrl(selection.category)
         setCurrentProduct(selection)
     }
 
@@ -93,20 +96,21 @@ function ContextProvider({ children }) {
         setIsOrderComplete(true)
     }
 
-    
+    function handleBackClick() {
+        Router.push(backUrl)
+        setIsCheckout(false)
+    }
 
-    
 
-   
-    useEffect(() => {
-        console.table(cart)
-    }, [cart])
+
+
+    // console.log(currentProduct.category)
     
     
 
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart, backUrl, setBackUrl, handleBackClick}}>
             {children}
         </Context.Provider>
     )

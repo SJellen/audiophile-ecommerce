@@ -9,7 +9,8 @@ export default function Header() {
     const {handleCartIconClick, isCheckout, orderCompleteOutSideLinkClick} = useContext(Context)
 
     return (
-        <div className={styles.container} style={{backgroundColor: isCheckout ? 'black' : '', width: isCheckout ? '100%' : '', padding: isCheckout ? '0 11%' : ''}}>
+        <div className={styles.header}>
+            <div className={styles.container} style={{backgroundColor: isCheckout ? 'black' : '', width: isCheckout ? '100%' : '', padding: isCheckout ? '0 11%' : ''}}>
             <div className={styles.leftFlexContainer}>
                 <div className={styles.hamburger}>
                     <Image src="/assets/shared/tablet/icon-hamburger.svg" alt="open menu icon" width="16" height="16" />
@@ -30,5 +31,7 @@ export default function Header() {
                 </div>
             </div>
         </div>
+        </div>
+        
     )
 }

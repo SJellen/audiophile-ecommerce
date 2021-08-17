@@ -1,5 +1,9 @@
 @use 'variables' as V;
 
+.header {
+    background-color: #181818;
+}
+
 .container {
     border-bottom: 1px solid #979797;
     width: 78%;
@@ -40,5 +44,11 @@
     a:hover {
         cursor: pointer;
         color: V.$orange;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .container {
+        max-width: 1440px;
     }
 }

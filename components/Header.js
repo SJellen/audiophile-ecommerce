@@ -8,13 +8,13 @@ import ImageNav from '../components/ImageNav'
 
 export default function Header() {
     
-    const {handleCartIconClick, isCheckout, orderCompleteOutSideLinkClick} = useContext(Context)
+    const {handleCartIconClick, isCheckout, orderCompleteOutSideLinkClick, handleHamburgerClick, navOpen} = useContext(Context)
 
     return (
         <div className={styles.header}>
             <div className={styles.container} style={{backgroundColor: isCheckout ? 'black' : '', width: isCheckout ? '100%' : '', padding: isCheckout ? '0 11%' : ''}}>
             <div className={styles.leftFlexContainer}>
-                <div className={styles.hamburger}>
+                <div className={styles.hamburger} onClick={handleHamburgerClick}>
                     <Image src="/assets/shared/tablet/icon-hamburger.svg" alt="open menu icon" width="16" height="16" />
                 </div>
                 <div className={styles.headerLogo}>
@@ -28,12 +28,12 @@ export default function Header() {
                 <Link href="/earphones" ><a onClick={() => orderCompleteOutSideLinkClick()}>EARPHONES</a></Link>      
             </nav>
             <div className={styles.rightFlexContainer}>
-                <div className={styles.cartLogo}>
+                <div className={styles.cartLogo} >
                     <Image src="/assets/shared/desktop/icon-cart.svg" alt="cart icon" width="23" height="20" onClick={() => handleCartIconClick()}/>
                 </div>
             </div>
         </div>
-        <div className={styles.imageNavContainer}>
+        <div className={styles.imageNavContainer} style={{display: navOpen ? "" : "none"}}>
             <ImageNav />
         </div>
         </div>

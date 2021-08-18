@@ -101,6 +101,16 @@ function ContextProvider({ children }) {
         setIsCheckout(false)
     }
 
+    const [navOpen, setNavOpen] = useState(false)
+
+    function handleHamburgerClick() {
+        if (navOpen) {
+            setNavOpen(false)
+        } else {
+            setNavOpen(true)
+        }
+    }
+
 
 
 
@@ -110,7 +120,7 @@ function ContextProvider({ children }) {
 
         
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart, backUrl, setBackUrl, handleBackClick}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart, backUrl, setBackUrl, handleBackClick, handleHamburgerClick, navOpen}}>
             {children}
         </Context.Provider>
     )

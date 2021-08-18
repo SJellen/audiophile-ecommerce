@@ -5,6 +5,7 @@
     height: auto;
     z-index: 99;
     width: 100%;
+    position: absolute;
 }
 
 .container {
@@ -17,7 +18,7 @@
     background-color: transparent;
     justify-content: space-between;
     font-family: V.$manrope;
-    z-index: 99;
+    z-index: 9;
     position: relative;
 }
 
@@ -25,7 +26,8 @@
     width: auto;
     height: auto;
     .hamburger {
-    display: none;
+        // display: none;
+        cursor: pointer;
     }
 }
 
@@ -60,7 +62,7 @@
     align-items: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    display: none;
+    // display: none;
 }
 
 @media only screen and (min-width: 1440px){

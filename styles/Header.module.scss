@@ -28,7 +28,7 @@
     width: auto;
     height: auto;
     .hamburger {
-        // display: none;
+        display: none;
         cursor: pointer;
     }
 }
@@ -70,5 +70,13 @@
 @media only screen and (min-width: 1440px){
     .container {
         max-width: 1440px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .container {
+        border: 1px solid red;
+        width: 90%;
+        height: 89px;
     }
 }

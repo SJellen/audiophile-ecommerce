@@ -8,10 +8,10 @@ import ImageNav from '../components/ImageNav'
 
 export default function Header() {
     
-    const {handleCartIconClick, isCheckout, orderCompleteOutSideLinkClick, handleHamburgerClick, navOpen} = useContext(Context)
+    const {handleCartIconClick, isCheckout, orderCompleteOutSideLinkClick, handleHamburgerClick, navOpen, path} = useContext(Context)
 
     return (
-        <div className={styles.header} style={{borderBottomLeftRadius: navOpen ? "10px" : "", borderBottomRightRadius: navOpen ? "10px" : ""}}>
+        <div className={styles.header} style={{borderBottomLeftRadius: navOpen ? "10px" : "", borderBottomRightRadius: navOpen ? "10px" : "", backgroundColor: path === "/" ? "" :  "black"}}>
             <div className={styles.container} style={{backgroundColor: isCheckout ? 'black' : '', width: isCheckout ? '100%' : '', padding: isCheckout ? '0 11%' : ''}}>
             <div className={styles.leftFlexContainer}>
                 <div className={styles.hamburger} onClick={handleHamburgerClick}>

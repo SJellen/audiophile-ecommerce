@@ -2,10 +2,13 @@
 
 .header {
     background-color: #181818;
+    height: auto;
+    z-index: 99;
+    width: 100%;
 }
 
 .container {
-    border-bottom: 1px solid #979797;
+    border-bottom: 1px solid rgba(151, 151, 151, .25);
     width: 78%;
     height: 96px;
     margin: 0 auto;
@@ -14,7 +17,7 @@
     background-color: transparent;
     justify-content: space-between;
     font-family: V.$manrope;
-    z-index: 2;
+    z-index: 99;
     position: relative;
 }
 
@@ -45,6 +48,19 @@
         cursor: pointer;
         color: V.$orange;
     }
+}
+
+.imageNavContainer {
+    background-color: white;
+    z-index: 1;
+    position: relative;
+    height: 450px;
+    margin-top: 0rem;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
 }
 
 @media only screen and (min-width: 1440px){

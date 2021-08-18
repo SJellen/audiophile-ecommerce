@@ -3,6 +3,8 @@ import styles from '../styles/Header.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Context} from '../context/Context'
+import ImageNav from '../components/ImageNav'
+
 
 export default function Header() {
     
@@ -30,6 +32,9 @@ export default function Header() {
                     <Image src="/assets/shared/desktop/icon-cart.svg" alt="cart icon" width="23" height="20" onClick={() => handleCartIconClick()}/>
                 </div>
             </div>
+        </div>
+        <div className={styles.imageNavContainer}>
+            <ImageNav />
         </div>
         </div>
         

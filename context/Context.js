@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import data from '../data/data.json'
 import items from '../data/cart.json'
 import useLocalStorageState from 'use-local-storage-state'
-import Router from 'next/router'
+import { Router, useRouter} from 'next/router'
 
 const Context = React.createContext() 
 
@@ -112,15 +112,13 @@ function ContextProvider({ children }) {
     }
 
     const [path, setPath] = useState()
+    const { asPath } = useRouter()
 
     useEffect(() => {
-        setPath(window.location.pathname)
-    }, [window.location.pathname])
+        setPath(asPath)
+    }, [asPath])
 
-    
-    
-
-        
+  
     return (
         <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart, backUrl, setBackUrl, handleBackClick, handleHamburgerClick, navOpen, path}}>
             {children}

@@ -20,8 +20,6 @@
     font-family: V.$manrope;
     z-index: 9;
     position: relative;
-
-    
 }
 
 .leftFlexContainer {
@@ -58,12 +56,13 @@
     background-color: white;
     z-index: 1;
     position: relative;
-    height: 450px;
+    height: 400px;
     margin-top: 0rem;
     display: flex;
     align-items: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border: 1px solid black;
     // display: none;
 }
 
@@ -75,8 +74,31 @@
 
 @media only screen and (max-width: 1000px){
     .container {
-        border: 1px solid red;
         width: 90%;
         height: 89px;
     }
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        width: 90%;
+        height: 89px;
+    }
+
+    .leftFlexContainer {
+        display: flex;
+        width: 200px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        .hamburger {
+            display: block;
+        }
+    }
+
+    .nav {
+        display: none;
+    }
+
 }

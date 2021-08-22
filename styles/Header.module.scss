@@ -62,8 +62,8 @@
     align-items: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: 1px solid black;
-    // display: none;
+    box-shadow: .5px .5px 5px .5px rgba(0, 0, 0, .05);
+    display: none;
 }
 
 @media only screen and (min-width: 1440px){
@@ -85,6 +85,11 @@
         height: 89px;
     }
 
+    .imageNavContainer {
+        display: flex;
+        height: 325px;
+    }
+
     .leftFlexContainer {
         display: flex;
         width: 200px;
@@ -102,3 +107,4 @@
     }
 
 }
+

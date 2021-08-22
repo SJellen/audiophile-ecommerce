@@ -16,8 +16,6 @@ function ContextProvider({ children }) {
     const [isCheckout, setIsCheckout] = useState(false)
     const [backUrl, setBackUrl] = useState()
 
-    
-
     function handleSeeProductClick(itemNumber) {
         let selection = data[itemNumber]
         setBackUrl(selection.category)
@@ -111,6 +109,10 @@ function ContextProvider({ children }) {
         }
     }
 
+    function handleImageNavLinkClick() {
+        if (navOpen) setNavOpen(false)
+    }
+
     const [path, setPath] = useState()
     const { asPath } = useRouter()
 
@@ -120,7 +122,7 @@ function ContextProvider({ children }) {
 
   
     return (
-        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart, backUrl, setBackUrl, handleBackClick, handleHamburgerClick, navOpen, path}}>
+        <Context.Provider value={{handleSeeProductClick, currentProduct, productPageQuantity, featureLineOne, featureLineTwo, handleYouMayLikeClick, handleProductPageDecrement, handleProductPageIncrement, handleAddToCartClick, handleCartIconClick, isCartOpen, cart, setCart, isCheckout, setIsCheckout, setIsCartOpen, isOrderComplete, setIsOrderComplete, orderCompleteOutSideLinkClick, isOrderComplete, handleContinueAndPay, filteredCart, backUrl, setBackUrl, handleBackClick, handleHamburgerClick, navOpen, path, handleImageNavLinkClick}}>
             {children}
         </Context.Provider>
     )

@@ -15,7 +15,6 @@
 
 .textContainer {
     width: 42.5%;
-    
     h2 {
         font-size: 2.5rem;
         letter-spacing: 2px;
@@ -37,7 +36,6 @@
     width: 50%;
     img {
         border-radius: 5px;
-        
     }
 }
 
@@ -46,7 +44,6 @@
     width: 50%;
     img {
         border-radius: 5px;
-        
     }
 }
 
@@ -55,12 +52,59 @@
     width: 50%;
     img {
         border-radius: 5px;
-        
     }
 }
 
 @media only screen and (min-width: 1440px){
     .container {
         max-width: 1440px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        width: 90%;
+        flex-direction: column-reverse;
+        margin-bottom: 150px;
+    }
+    .imgContainer {
+        display: none;
+    }
+
+    .imgContainerTablet {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .textContainer {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .imgContainerTablet {
+        display: none;
+    }
+
+    .textContainer {
+        h2 {
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+    }
+
+    .imgContainerMobile {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        img {
+            width: 150%;
+        }
     }
 }

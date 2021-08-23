@@ -16,9 +16,9 @@
         filter: brightness(0) saturate(100%) invert(64%) sepia(30%) saturate(1546%) hue-rotate(329deg) brightness(92%) contrast(83%);
     }
     p {
-        color: V.$gray;
-        font-size: .9rem;
-        font-weight: 100;
+        color: V.$slate;
+        font-size: 1rem;
+        font-weight: 300;
     }
 }
 
@@ -103,5 +103,18 @@
     a:hover {
         cursor: pointer;
         background-color: V.$lightOrange;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+   .container {
+       width: 90%;
+       right: 5%;
+   } 
+}
+
+@media only screen and (max-width: 575px) {
+    .topContainer, .middleContainer, .buttonBox {
+        width: 85%;
     }
 }

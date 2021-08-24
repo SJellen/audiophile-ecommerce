@@ -239,3 +239,53 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 650px) {
+    .codContainer {
+        flex-direction: column;
+        .iconContainer {
+            justify-content: center;
+        }
+        p {
+            width: 100%;
+            text-align: center
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .h1 {
+        font-size: 1.75rem;
+        margin: 2rem auto 0 auto;
+    }
+
+    .billingFlexContainer {
+        flex-direction: column;
+        .inputBillingFlex {
+            width: 100%;
+        }
+    }
+
+    .shippingFlexContainer {
+        .inputShippingFlex {
+            width: 100%;
+        }
+    }
+
+    .paymentSelect {
+        width: 100%;
+    }
+
+    .emoneyContainer {
+        flex-direction: column;
+        .emoneyNumberContainer {
+            width: 100%;
+            margin: 1rem auto 0  auto;
+        }
+    }
+
+    .container {
+        height: auto;
+    }
+}
+

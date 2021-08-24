@@ -34,6 +34,7 @@
       margin: 1rem auto 8.5rem auto;
       display: flex;
       justify-content: space-between;
+      border: 1px solid red;
 
   }
 
@@ -42,4 +43,23 @@
         max-width: 1440px;
         margin: 0 auto;
     }
+}
+
+
+@media only screen and (max-width: 1350px){
+  
+  .flexContainer {
+      flex-direction: column;
+      height: auto;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .flexContainer {
+    width: 90%;
+  }
+
+  .goBack {
+    width: 90%;
+  }
 }

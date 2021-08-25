@@ -1,6 +1,6 @@
 @use 'variables' as V;
 
-.itemContainer {
+.itemContainer, .evenItemContainer {
     border: 1px solid red;
     width: 78%;
     height: auto;
@@ -70,4 +70,41 @@
         }
     }
     
+}
+
+.evenItemContainer {
+    flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 900px) {
+    .itemContainer, .evenItemContainer {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .itemContainer, .evenItemContainer {
+        margin: 7.5rem auto 0 auto;
+        flex-direction: column;
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: flex;
+            img {
+                border-radius: 10px;
+            }
+        }
+        .infoContainer {
+            width: 90%;
+            margin: 3rem auto;
+        }
+        .textContainer {
+            width: 100%;
+            text-align: center;
+        }
+        #evenItemContainer {
+            flex-direction: column;
+        }
+    }
 }

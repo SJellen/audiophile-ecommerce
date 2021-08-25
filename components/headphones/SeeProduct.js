@@ -31,7 +31,7 @@ export default function SeeProduct() {
                     </div> 
                 </div>
             </div>
-            <div className={styles.itemContainer} style={{flexDirection: "row-reverse"}}>
+            <div className={styles.evenItemContainer} >
                 <div className={styles.imgContainer}>
                     <Image src="/assets/category-headphones/desktop/image-xx99-mark-one.jpg" alt="headphones" width="1080" height="1120"  className={styles.img}/>
                 </div>

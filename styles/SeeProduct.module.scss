@@ -108,3 +108,10 @@
         }
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .itemContainer, .evenItemContainer {
+        margin: 5rem auto;
+    }
+}
+

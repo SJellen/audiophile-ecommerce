@@ -80,47 +80,56 @@ export default function useCheckoutLogic() {
         
         if (checkoutForm.name.length === 0) {
             errorStyles("name")
+            setIsOrderComplete(false)
         } else {
             defaultStyles("name")
         }
         if (validateEmail(checkoutForm.email) === false) {
             errorStyles("email")
+            setIsOrderComplete(false)
         }  else {
             defaultStyles("email")
         }
         if ((checkoutForm.phone.match(/\d/g)?.length === 11) === false || checkoutForm.phone.length === null) {
             errorStyles("phone")
+            setIsOrderComplete(false)
         }  else {
             defaultStyles("phone")
         }
         if (checkoutForm.address.length === 0) {
             errorStyles("address")
+            setIsOrderComplete(false)
         }  else {
             defaultStyles("address")
         }
         if (validateZipCode(checkoutForm.zip) !== true) {
             errorStyles("zip")
+            setIsOrderComplete(false)
         }  else {
             defaultStyles("zip")
         }
         if (checkoutForm.city.length === 0) {
             errorStyles("city")
+            setIsOrderComplete(false)
         }  else {
             defaultStyles("city")
         }
         if (checkoutForm.country.length === 0) {
             errorStyles("country")
+            setIsOrderComplete(false)
         }  else {
             defaultStyles("country")
         }
         if (checkoutForm.paymentChoice === "emoney") {
             if (validateEmoney(checkoutForm.emoney) !== true) {
                 errorStyles("emoney")
+                setIsOrderComplete(false)
             }  else {
                 defaultStyles("emoney")
             }
             if (validatePIN(checkoutForm.pin) !== true) {
                 errorStyles("pin")
+                setIsOrderComplete(false)
             }  else {
                 defaultStyles("pin")
             }

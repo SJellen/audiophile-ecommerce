@@ -11,7 +11,10 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-            <div className={styles.topLine}></div>
+            <div className={styles.topLineContainer}>
+                <div className={styles.topLine}></div>
+            </div>
+            
             <div className={styles.logoNavFlexContainer}>
                 <div className={styles.logo}>
                     <Image src="/assets/shared/desktop/logo.svg" alt="audiophile logo" width="143" height="25"/>

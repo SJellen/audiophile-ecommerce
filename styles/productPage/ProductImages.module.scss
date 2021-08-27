@@ -86,3 +86,87 @@
         width: 90%;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .topLeftContainer {
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: flex;
+            .img {
+                border-radius: 7.5px;
+            }
+        }
+    }
+    .bottomLeftContainer {
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: flex;
+            .img {
+                border-radius: 7.5px;
+            }
+        }
+    }
+    .rightContainer {
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: flex;
+            .img {
+                border-radius: 7.5px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .leftContainer {
+        width: 100%;
+    }
+    .topLeftContainer {
+        margin: 0rem auto 1rem auto;
+        .imgContainerTablet {
+            display: none;
+        }
+        .imgContainerMobile {
+            display: flex;
+            .img {
+                border-radius: 7.5px;
+            }
+        }
+    }
+    .bottomLeftContainer {
+        margin: 0rem auto 1rem auto;
+        border: 1px solid gold;
+        .imgContainerTablet {
+            display: none;
+        }
+        .imgContainerMobile {
+            display: flex;
+            .img {
+                border-radius: 7.5px;
+            }
+        }
+    }
+    .rightContainer {
+        width: 100%;
+        .imgContainerTablet {
+            display: none;
+        }
+        .imgContainerMobile {
+            display: flex;
+            .img {
+                border-radius: 7.5px;
+            }
+        }
+    }
+}

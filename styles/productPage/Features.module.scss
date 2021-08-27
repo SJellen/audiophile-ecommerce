@@ -83,24 +83,52 @@
     }
 
     .contentsContainer {
-        border: 1px solid green;
         width: 100%;
         .textBox {
             border: 1px solid salmon;
             width: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
         }
 
         h2 {
             border: 1px solid gold;
             height: auto;
+            width: 50%;
             
         }
         ul {
             margin-top: 0;
-            width: 40%;
+            width: 50%;
             border: 1px solid blue;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        margin: 5rem auto;
+    }
+
+    .featureContainer {
+        h2 {
+            font-size:  1.5rem;
+        }
+    }
+
+    .contentsContainer {
+        .textBox {
+            flex-direction: column;
+            
+        }
+        h2 {
+            font-size:  1.5rem;
+            width: 100%;
+            margin: 3rem auto;
+        }
+        ul {
+            width: 100%;
         }
     }
 }

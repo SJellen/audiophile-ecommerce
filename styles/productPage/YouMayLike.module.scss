@@ -50,6 +50,7 @@
         width: 160px;
         height: 48px;
         font-size: .9rem;
+        font-weight: 500;
         letter-spacing: 1px;
         margin: 0 auto;
     }
@@ -69,5 +70,69 @@
 @media only screen and (max-width: 900px) {
     .container {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .productBox {
+        .imgContainerTablet {
+            display: block;
+        }
+        .imgContainer {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .headline {
+        font-size: 1.5rem;
+    }
+    .productBox {
+        width: 32%;
+        h2 {
+            font-size: 1.05rem;
+        }
+
+        a {
+            font-size: .75rem;
+            width: 99%;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        margin: 5rem auto;
+    }
+
+    .headline {
+        margin: 2rem auto;
+    }
+    .productFlexContainer {
+        flex-direction: column;
+    }
+
+    .productBox {
+        border: 1px solid gold;
+        width: 100%;
+        margin: 2rem auto;
+        .imgContainerTablet {
+            display: none;
+        }
+        .imgContainerMobile {
+            display: block;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        a {
+            margin: .5rem auto;
+            font-size: .75rem;
+            width: 160px;
+            text-align: center;
+        }
     }
 }

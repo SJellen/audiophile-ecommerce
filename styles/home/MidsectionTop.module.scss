@@ -2,9 +2,9 @@
 
 .container {
     width: 78%;
-    height: 1500px;
+    height: auto;
     margin: 0 auto;
-    border: 1px solid red;
+    border: 1px solid silver;
 }
 
 .topImgContainer {
@@ -78,6 +78,54 @@
 
     }
 
+}
+
+@media only screen and (max-width: 1000px) {
+    .topImgContainer {
+        height: 720px;
+        display: flex;
+        justify-content: center;
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: block;
+            margin-top: 3rem;
+            border: 1px solid blue;
+            height: auto;
+            img {
+                width: 200px;
+                height: auto;
+            }
+        }
+        .circle {
+            position: absolute;
+            z-index: 1;
+            margin-top: -30%;
+            margin-left: 0%;
+        }
+        .textContainerTop {
+          margin-top: 25%;
+          right: calc(50% - 175px);
+          text-align: center;
+          h1 {
+              line-height: 1;
+              margin-top: 0;
+          }
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .topImgContainer {
+        .textContainerTop {
+            margin-top: 32.5%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    
 }
 
 

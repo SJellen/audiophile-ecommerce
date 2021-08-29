@@ -87,5 +87,47 @@
 }
 
 @media only screen and (max-width: 650px) {
+    .bottomImgContainer {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
 
+    }
+
+    .leftImgContainer {
+        width: 100%;
+        height: 48.75%;
+       
+        .imgContainerTablet {
+            display: none;
+        }
+        .imgContainerMobile {
+            display: flex;
+            
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .rightImgContainer {
+        margin: 3.5% auto 0 auto;
+        width: 100%;
+        min-height: 255px;
+        flex-grow: 1;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .rightImgContainer {
+        min-height: 200px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .textContainerTop {
+        width: 80%;
+        justify-content: center;
+    }
 }

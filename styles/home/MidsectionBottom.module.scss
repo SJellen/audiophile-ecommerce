@@ -14,10 +14,11 @@
 
 .leftImgContainer {
     width: 48.75%;
-    height: 100%;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
     .imgContainer {
+         display: flex;
         img {
             border-radius: 10px;
         }
@@ -64,4 +65,27 @@
         }  
     }
     
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .leftImgContainer {
+        .imgContainer {
+            display: none;
+        }
+        .imgContainerTablet {
+            display: flex;
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .rightImgContainer {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
 }

@@ -10,7 +10,6 @@
     justify-content: space-between;
     align-items: center;
     font-family: V.$manrope;
-    border: 1px solid red;
 }
 
 .textContainer {
@@ -120,6 +119,16 @@
 
 @media only screen and (max-width: 375px) {
     .container {
-        margin: 300px auto 100px auto;
+        margin: 200px auto 100px auto;
+    }
+
+    .textContainer {
+        h2 {
+            font-size: 1.75rem;
+        }
+        p {
+            font-size: .9rem;
+        }
     }
 }
+

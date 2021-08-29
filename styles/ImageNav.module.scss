@@ -1,7 +1,6 @@
 @use 'variables' as V;
 
 .container {
-    border: 1px solid red;
     margin: 7.5rem auto;
     width: 78%;
     height: 284px;
@@ -105,15 +104,12 @@
 
 @media only screen and (max-width: 500px) {
     .container {
-        border: 1px solid purple;
         flex-direction: column;
         height: max-content;
         margin: 0 auto 0 auto;
-        
     }
 
     .selectionBox {
-        border:  1px solid green;
         width: 100%;
         margin: 1rem auto;
     }
@@ -121,10 +117,9 @@
 
 @media only screen and (max-width: 325px) {
     .container {
-        border: 1px solid purple;
         flex-direction: column;
         height: max-content;
-        margin: 5rem auto 0rem auto;
+        margin: 0rem auto 0rem auto;
     }
 }
 

@@ -7,7 +7,6 @@ import Cart from './Cart'
 import Checkout from './checkout/Checkout'
 import { Context } from '../context/Context'
 
-
 export default function Layout({children}) {
 
   const {isCheckout, isCartOpen} = useContext(Context)

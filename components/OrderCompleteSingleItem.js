@@ -1,20 +1,11 @@
 import React, {useContext} from 'react'
 import { Context } from '../context/Context'
-import useCheckoutLogic from '../logic/useCheckoutLogic'
 import Image from 'next/image'
-import Link from 'next/link'
 import styles from '../styles/OrderCompleteItems.module.scss'
 
 export default function OrderCompleteSingleItems() {
 
-    const {handleContinueAndPay, isOrderComplete, isCheckout,filteredCart} = useContext(Context)
-    const { totalPrice} = useCheckoutLogic()
-    const vat = ((totalPrice() / 100) * 20).toLocaleString("en-US", {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-      })
-
-    
+    const {filteredCart} = useContext(Context)
 
     return (
         filteredCart && filteredCart[0] ? 

@@ -3,7 +3,6 @@ import styles from '../styles/Cart.module.scss'
 import { Context} from '../context/Context'
 import useCartLogic from '../logic/useCartLogic'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Cart() {
 

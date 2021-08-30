@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function ProductImages() {
 
-    const {currentProduct, productPageQuantity} = useContext(Context)
+    const {currentProduct} = useContext(Context)
 
     return (
         <div className={styles.container}>

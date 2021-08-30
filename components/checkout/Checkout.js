@@ -7,7 +7,7 @@ import { Context } from '../../context/Context'
 
 export default function Checkout() {
 
-    const {isCheckout, dimmerStyle, isOrderComplete, handleBackClick} = useContext(Context)
+    const {isCheckout, isOrderComplete, handleBackClick} = useContext(Context)
 
     return (
         <div className={styles.container} style={{ backgroundColor: isOrderComplete ? "gray" : '', display: isCheckout ? "" : 'none'}}>

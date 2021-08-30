@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { Context } from "../context/Context";
 
 
 export default function useCartLogic() {
 
-    const {cart, setCart, isCheckout, setIsCheckout, isCartOpen, setIsCartOpen, filteredCart} = useContext(Context)
+    const {cart, setCart,  setIsCheckout,  setIsCartOpen, filteredCart} = useContext(Context)
     
    
     function handleRemoveAllClick() {
@@ -138,11 +138,6 @@ export default function useCartLogic() {
         ])
         
     }
-
-   
-   
-    
-    
 
     return { handleRemoveAllClick, totalPrice, handleCartItemDecrement, handleCartItemIncrement, handleCartCheckoutClick, handleOrderCompleteGoHomeClick}
 }

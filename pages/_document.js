@@ -1,4 +1,3 @@
-import { redirect } from 'next/dist/next-server/server/api-utils'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {

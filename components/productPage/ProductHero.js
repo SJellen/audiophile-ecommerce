@@ -1,7 +1,6 @@
 import React, {useContext} from 'react'
 import styles from '../../styles/productPage/ProductHero.module.scss'
 import { Context } from '../../context/Context'
-import Link from 'next/link'
 import Image from 'next/image'
 
 export default function ProductHero() {

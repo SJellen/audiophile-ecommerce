@@ -7,7 +7,7 @@ import { Context } from '../../context/Context'
 export default function Form() {
 
     const {checkoutForm, handleChange, handleSubmit} = useCheckoutLogic()
-    const {isCheckout, dimmerStyle, isOrderComplete} = useContext(Context)
+    const {isCheckout, isOrderComplete} = useContext(Context)
 
     return (
         <div className={styles.container} style={{display: isCheckout ? '' : 'none', filter: isOrderComplete ? "brightness(.55)" : ""}}>

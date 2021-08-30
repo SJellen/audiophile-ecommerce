@@ -1,6 +1,5 @@
 import React, {useContext} from 'react'
 import styles from '../styles/productPage/ProductPage.module.scss'
-import Image from 'next/image'
 import {Context} from  '../context/Context'
 import ImageNav from '../components/ImageNav'
 import ProductHero from '../components/productPage/ProductHero'
@@ -10,7 +9,7 @@ import YouMayLike from '../components/productPage/YouMayLike'
 
 export default function ProductPage() {
 
-    const {currentProduct, isCheckout, handleBackClick} = useContext(Context)
+    const {isCheckout, handleBackClick} = useContext(Context)
 
     return (
         <div className={styles.container} style={{display: isCheckout ? 'none' : ''}}>

@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../context/Context";
 import useCartLogic from "./useCartLogic";
 
 export default function useCheckoutLogic() {
 
     const {filteredCart, totalPrice} = useCartLogic()
-    const {isOrderComplete, setIsOrderComplete} = useContext(Context)
+    const { setIsOrderComplete} = useContext(Context)
 
     const initialForm = {
         name: '',

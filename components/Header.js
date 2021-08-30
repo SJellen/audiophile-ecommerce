@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { Context} from '../context/Context'
 import ImageNav from '../components/ImageNav'
 
-
 export default function Header() {
     
     const {handleCartIconClick, isCheckout, orderCompleteOutSideLinkClick, handleHamburgerClick, navOpen, path} = useContext(Context)

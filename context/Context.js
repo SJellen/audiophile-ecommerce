@@ -14,7 +14,7 @@ function ContextProvider({ children }) {
     const [featureLineTwo, setFeatureLineTwo] = useState()
     const [isCartOpen, setIsCartOpen] = useState(false)
     const [isCheckout, setIsCheckout] = useState(false)
-    const [backUrl, setBackUrl] = useState()
+    const [backUrl, setBackUrl] = useState('/')
 
     function handleSeeProductClick(itemNumber) {
         let selection = data[itemNumber]
@@ -94,8 +94,8 @@ function ContextProvider({ children }) {
         setIsOrderComplete(true)
     }
 
+
     function handleBackClick() {
-        Router.push(backUrl)
         setIsCheckout(false)
     }
 

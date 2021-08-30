@@ -1,7 +1,6 @@
 @use '../variables' as V;
 
 .container {
-    border: 1px solid red;
     font-family: V.$manrope;
     width: 78%;
     height: auto;
@@ -85,7 +84,6 @@
     .contentsContainer {
         width: 100%;
         .textBox {
-            border: 1px solid salmon;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -93,7 +91,6 @@
         }
 
         h2 {
-            border: 1px solid gold;
             height: auto;
             width: 50%;
             
@@ -101,7 +98,6 @@
         ul {
             margin-top: 0;
             width: 50%;
-            border: 1px solid blue;
         }
     }
 }

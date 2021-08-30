@@ -2,7 +2,6 @@
 
 
 .itemContainer {
-    border: 1px solid red;
     font-family: V.$manrope;
     width: 78%;
     height: auto;
@@ -32,7 +31,6 @@
     }
 
     .textContainer {
-        border: 1px solid blue;
         width: 80%;
         height: auto;
         span {
@@ -150,13 +148,11 @@
         .imgContainerMobile {
             display: flex;
             justify-content: center;
-            border: 1px solid red;
             img {
                 width: 327px;
             }
         }
         .infoContainer {
-            border: 1px solid gold;
             width: 100%;
             margin: 3rem auto 0 auto;
         }

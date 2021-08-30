@@ -1,7 +1,6 @@
 @use '../variables' as V;
 
 .container {
-    border: 1px solid red;
     font-family: V.$manrope;
     width: 78%;
     height: auto;
@@ -146,7 +145,6 @@
     }
     .bottomLeftContainer {
         margin: 0rem auto 1rem auto;
-        border: 1px solid gold;
         .imgContainerTablet {
             display: none;
         }

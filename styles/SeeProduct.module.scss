@@ -1,7 +1,6 @@
 @use 'variables' as V;
 
 .itemContainer, .evenItemContainer {
-    border: 1px solid red;
     width: 78%;
     height: auto;
     margin: 10rem auto;
@@ -30,7 +29,6 @@
     }
 
     .textContainer {
-        border: 1px solid blue;
         width: 80%;
         height: auto;
         span {

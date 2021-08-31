@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Audiophile Ecommerce fact site solution
 
-## Getting Started
+This is a solution to the [Audiophile Ecommerce site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Built with](#built-with)
+  - [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### The challenge
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Users should be able to:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add/Remove products from the cart
+- Edit product quantities in the cart
+- Fill in all fields in the checkout
+- Receive form validations if fields are missed or incorrect during checkout
+- See correct checkout totals depending on the products in the cart
+- Shipping always adds $50 to the order
+- VAT is calculated as 20% of the product total, excluding shipping
+- See an order confirmation modal after checking out with an order summary
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Screenshot
 
-## Learn More
+![](https://raw.githubusercontent.com/SJellen/audiophile-ecommerce/main/screenshot.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Solution URL: [Live](https://github.com/SJellen/audiophile-ecommerce)
+- Live Site URL: [Code](https://audiophile-ecommerce-tau.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Built with
+- Figma
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [Next.js](https://nextjs.org/) - React framework
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Website - [Scott Jellen](https://www.scottjellen.com)

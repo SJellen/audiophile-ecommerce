@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Live](https://github.com/SJellen/audiophile-ecommerce)
-- Live Site URL: [Code](https://audiophile-ecommerce-tau.vercel.app/)
+- Solution URL: [Code](https://github.com/SJellen/audiophile-ecommerce)
+- Live Site URL: [Live](https://audiophile-ecommerce-tau.vercel.app/)
 
 ### Built with
 - Figma

@@ -1,4 +1,4 @@
-# Frontend Mentor - Audiophile Ecommerce fact site solution
+# Frontend Mentor - Audiophile Ecommerce site solution
 
 This is a solution to the [Audiophile Ecommerce site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
